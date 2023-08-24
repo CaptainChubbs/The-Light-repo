@@ -1,0 +1,46 @@
+/* styles.css */
+
+/* Add your custom CSS rules here */
+body {
+    font-family: Arial, sans-serif;
+}
+header{
+    background-color: lightcyan;
+}
+.dropdown{
+    background-color: black;
+}
+section{
+    background-color: #CCD6A6;
+}
+footer{
+    background-color: lightcyan;
+}
+.container {
+    background-color: #CCD6A6;
+    margin-top: 20px;
+}
+
+/* Customize the styling of profile cards */
+.card {
+    border: none;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+/* Center-align the contact section */
+.contact-section {
+    margin-bottom: 20px;
+}
+
+/* Center-align the copyright text */
+.copyright-text {
+    margin-top: 20px;
+}
