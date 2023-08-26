@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Custom CSS for Curved Textboxes */
+        .form-control {
+            border-radius: 15px; /* Adjust the value for the desired curvature */
+        }
+
         /* Custom CSS for Social Icons */
         .social-icons {
             display: flex;
@@ -26,10 +31,14 @@
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="h4">Welcome to Nurse Procurement Service</h1>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="index.html" class="me-3">Home</a>
+                <a href="about.html" class="me-3">About Us</a>
+                <a href="services.html" class="me-3">Services</a>
+                <a href="#" class="me-3 dropdown-toggle" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
+                <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+                    <li><a class="dropdown-item" href="nurse-login.html">Nurse Login</a></li>
+                    <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -38,11 +47,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="social-icons mb-4">
-                        <a href="#" class="social-icon"><i class="bi bi-facebook fs-3 text-black"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-twitter fs-3 text-black"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-instagram fs-3 text-black"></i></a>
-                    </div>
+                    <div class="col-md-6">
+                        <div class="social-icons mb-4">
+                            <a href="mailto:your@email.com" class="social-icon"><i class="bi bi-envelope fs-3 text-black"></i></a>
+                            <a href="https://www.instagram.com/your_instagram/" class="social-icon"><i class="bi bi-instagram fs-3 text-black"></i></a>
+                            <a href="https://www.facebook.com/your_facebook/" class="social-icon"><i class="bi bi-facebook fs-3 text-black"></i></a>
+                            <a href="https://www.twitter.com/your_twitter/" class="social-icon"><i class="bi bi-twitter fs-3 text-black"></i></a>
+                            <a href="https://www.linkedin.com/in/your_linkedin/" class="social-icon"><i class="bi bi-linkedin fs-3 text-black"></i></a>
+                        </div>
+                    </div>                    
                 </div>
                 
                 <div class="col-md-6">
