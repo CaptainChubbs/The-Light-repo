@@ -9,13 +9,27 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        header{
-            background-color: #A76F6F;
-            color: #F1F0E8;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
         }
         nav {
-        display: flex;
-        gap: 150px;
+            display: flex;
+            gap: 80px; /* Adjust the value for the desired spacing */
+        }
+        nav a {
+            text-decoration: none;
+            color: #333; /* Adjust the color as needed */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff; /* Adjust the color for the hover state */
         }
         .dropdown{
             background-color: black;
@@ -32,19 +46,19 @@
 </head>
 <body>
     <!-- Navigation Bar (same as before) -->
-    <header class="py-3">
+    <header class="border-bottom py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="h4">Abahlengi</h1>
-            <nav class="d-none d-lg-block">
+            <nav>
                 <a href="index.html" class="me-3">Home</a>
                 <a href="about.html" class="me-3">About Us</a>
                 <a href="services.html" class="me-3">Services</a>
+                <a href="team.html" class="me-3">Meet The Team</a>
                 <a href="#" class="me-3 dropdown-toggle" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
                 <ul class="dropdown-menu" aria-labelledby="loginDropdown">
                     <li><a class="dropdown-item" href="nurse-login.html">Nurse Login</a></li>
                     <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
                 </ul>
-                <!-- <a href="#">Contact</a> -->
             </nav>
         </div>
     </header>
@@ -111,7 +125,7 @@
         </div> 
     </section>
     
-    <footer class="bg-light text-center py-3">
+    <footer class="bg-black text-center py-3">
         <div class="container">
             <p class="mb-0">&copy; 2023 Nurse Procurement Service. All rights reserved.</p>
             <p class="mb-0"><strong>Get in touch</strong></p>

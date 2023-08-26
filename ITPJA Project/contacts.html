@@ -8,9 +8,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+       header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
         nav {
-        display: flex;
-        gap: 150px;
+            display: flex;
+            gap: 80px; /* Adjust the value for the desired spacing */
+        }
+        nav a {
+            text-decoration: none;
+            color: #333; /* Adjust the color as needed */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff; /* Adjust the color for the hover state */
         }
         /* Custom CSS for Curved Textboxes */
         .form-control {
@@ -33,11 +51,12 @@
 <body>
     <header class="border-bottom py-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="h4">Welcome to Nurse Procurement Service</h1>
+            <h1 class="h4">Abahlengi</h1>
             <nav>
                 <a href="index.html" class="me-3">Home</a>
                 <a href="about.html" class="me-3">About Us</a>
                 <a href="services.html" class="me-3">Services</a>
+                <a href="team.html" class="me-3">Meet The Team</a>
                 <a href="#" class="me-3 dropdown-toggle" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
                 <ul class="dropdown-menu" aria-labelledby="loginDropdown">
                     <li><a class="dropdown-item" href="nurse-login.html">Nurse Login</a></li>
