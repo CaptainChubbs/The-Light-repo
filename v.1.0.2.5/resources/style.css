@@ -3,7 +3,7 @@
             font-family: Arial, sans-serif;
         }
         .navbar {
-            background-color: #343a40;
+            background-color: #CCD6A6;
         }
         .jumbotron {
             background-image: url('background-image.jpg');
@@ -13,7 +13,7 @@
             padding: 150px 0;
         }
         .services {
-            background-color: #DAE2B6;
+            background-color: #dcdfd3dc;
             padding: 80px 0;
         }
         .service-card {
@@ -30,3 +30,24 @@
             padding: 80px 0;
         }
     
+        .footer {
+            background-color: #CCD6A6;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .social-icons {
+            margin: 0 10px;
+            font-size: 24px;
+          }
+          .contact-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background-color: #F4EAD5;
+            color: #000;
+            border-radius: 15px;
+            cursor: pointer;
+          }
