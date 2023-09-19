@@ -1,0 +1,100 @@
+/*General Webpage CSS Styling*/
+:root{
+    --bs-body-font-family:'Tenor Sans', sans-serif
+}
+body,p,a{
+    font-family: 'Tenor Sans', sans-serif !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Bellefair', serif !important;
+}
+
+*, header, nav, div{
+    background-color: #FFFBE9;
+}
+
+/*Navigation Bar Styling*/
+nav{
+height: 25px;
+color: #798A70;
+}
+
+.navbar-nav a{
+    display: inline-block;
+    position: relative;
+    color: #798A70;
+}
+.navbar-nav a:after{
+  transform: scaleX(0);
+  background-color: 
+#798A70;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.navbar-nav a:hover{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+form a{
+    text-decoration: none;
+    color: #798A70;
+}
+
+/*"Log In" Button Styling*/
+form .btn,
+form .btn:visited
+{
+    -webkit-border-radius: 28 !important;
+    -moz-border-radius: 28 !important;
+    border-radius: 28px !important;
+    color: #fffbe9 !important;
+    font-size: 18px !important;
+    background: #798A70 !important;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+ form .btn:hover,
+ form .btn:active,
+ form .btn:focus {
+    background: #a4bc98 !important;
+  text-decoration: none
+  }
+
+
+#footer,footer div, footer p, footer a, footer h2{
+    background-color: #798A70;
+    font-size: large;
+}
+
+/*Applying CSS to the Footer*/
+footer{
+    color: #FFFBE9;
+}
+footer .btn,
+footer .btn:visited{
+font-weight: 0;
+font-size: 25px;
+color: #798A70;
+background-color: #fffbe9 !important;
+padding: 10px 30px;
+border: solid #fffbe9 2px;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 1000ms;
+transform: translateY(0);
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+footer .btn:hover,
+footer .btn:active,
+footer .btn:focus {
+    transition : 1000ms !important;
+    padding: 10px 50px !important;
+    transform : translateY(-0px) !important;
+    background-color: #fffbe9 !important;
+    color: #798A70 !important;
+    border: solid 2px #fffbe9 !important;
+}
