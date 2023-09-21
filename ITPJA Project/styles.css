@@ -36,6 +36,7 @@ color: #798A70;
     transform-origin: bottom left;
 }
 
+/*Applying styling to the form elements*/
 form a{
     text-decoration: none;
     color: #798A70;
@@ -62,7 +63,24 @@ form .btn:visited
   text-decoration: none
   }
 
+  /*CSS Styling being used for Javascript validation*/
+  .wrong .fa-check
+  {
+      display: none;
+  }
+  
+  .good .fa-times
+  {
+      display: none;
+  }
+  .valid-feedback,
+  .invalid-feedback {
+    margin-left: calc(2em + 0.25rem + 1.5rem);
+  }
 
+  #box{
+    display: none;
+  }
 #footer,footer div, footer p, footer a, footer h2{
     background-color: #798A70;
     font-size: large;
