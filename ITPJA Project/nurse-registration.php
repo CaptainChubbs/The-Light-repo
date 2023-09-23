@@ -190,10 +190,7 @@
                 <input type="password" class="form-control" id="conf-password" required>
                 <div class="invalid-feedback">Field Cannot be Empty</div>
               </div>
-              <div class="form-group col-sm-6">
-                <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
-                <div class="help-block with-errors"></div>
-              </div>
+
               <span id="matching-message"></span>
 
               <hr><br>
