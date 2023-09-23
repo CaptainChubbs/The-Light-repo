@@ -16,7 +16,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Tenor+Sans&display=swap" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     
 
     <!--Importing Font Awesome Icons-->
@@ -70,7 +69,7 @@
         <div class="container-fluid d-flex align-items-center justify-content-center" style="padding: 50px 0">
 
             <!--Form Begins-->
-            <form action="" method="post" style="width: 40%;">
+            <form action="" method="post" style="width: 40%;" class="was-validated" role="form" data-toggle="validator" novalidate>
             <h1 class="h1 text-center"style="color: #798A70; margin: auto; padding-bottom:10px">Nurse Portal Registration</h1>
             <p class="text-center" style="padding-bottom: 30px;">Register to join the network</p>
 
@@ -86,26 +85,26 @@
               <div class="col mb-3">
                 <label for="first-name" class="form-label">First Name:</label>
                 <input type="text" class="form-control" id="first-name" required>
+                <div class="invalid-feedback">Field Cannot be Empty</div>
               </div>
               <div class="col mb-3">
                 <label for="last-name" class="form-label">Last Name:</label>
                 <input type="text" class="form-control" id="last-name" required>
+                <div class="invalid-feedback">Field Cannot be Empty</div>
               </div>
             </div>
             <!-- Email Address Input-->
-              <div class="mb-3">
+              <div class="mb-3" data-validate="email">
                 <label for="email-address" class="form-label">Email Address:</label>
-                <input type="email" class="form-control" id="email-address" required>
-                <i class="fa fa-check"></i>
-                <i class="fa fa-times"></i>
-                <i class="fa fa-exclamation"></i>
-                <span id="invalid-email">Enter a Valid Email Address</span>
-                <span id="empty-email">The Email field cannot be empty</span>
+                <input type="email" class="form-control email-add" id="email-address" required>
+                <span class="valid-feedback"><i class="fa fa-check"></i> Valid Email</span>
+                <span id="invalid-email" class="invalid-feedback"><i class="fa fa-times"></i> Enter a Valid Email Address</span>
               </div>
               <!--Mobile Number Input-->
               <div class="mb-3">
                 <label for="mobile-number" class="form-label">Mobile Number:</label>
-                <input type="tel" class="form-control" id="mobile-number" required>
+                <input type="tel" class="form-control" id="mobile-number" required minlength="10">
+                <div class="invalid-feedback">Field Cannot be Empty</div>
               </div>
               <hr><br>
               <div class="row">
@@ -114,6 +113,7 @@
                   <!--Address Input-->
                   <label for="location-input" class="form-label">Address Line 1:</label>
                   <input type="text" placeholder="" class="form-control" id="location-input" name="location-input" required/>
+                  <div class="invalid-feedback">Field Cannot be Empty</div>
                 </div>
                 <div class="mb-3 col">
                   <label for="locality-input2" class="form-label">Address Line 2:</label>
@@ -125,11 +125,13 @@
                 <div class="mb-3 col">
                   <label for="locality-input" class="form-label">City:</label>
                   <input type="text" class="form-control" placeholder="" id="locality-input" name="locality-input" required/>
+                  <div class="invalid-feedback">Field Cannot be Empty</div>
                 </div>
                 <!--Province Input-->
                 <div class="mb-3 col">
                   <label for="administrative_area_level_1-input" class="form-label">Province:</label>
                   <input type="text" class="half-input form-control" placeholder="" id="administrative_area_level_1-input" name="administrative_area_level_1-input" required/>
+                  <div class="invalid-feedback">Field Cannot be Empty</div>
                 </div>
               </div>
               <!--Postal Code Input-->
@@ -137,6 +139,7 @@
                 <div class="mb-3 col">
                   <label for="postal_code-input" class="form-label">Postal Code:</label>
                   <input type="text" class="half-input form-control" placeholder="" id="postal_code-input" name="postal_code-input" required/>
+                  <div class="invalid-feedback">Field Cannot be Empty</div>
                 </div>
                 <div class="mb-3 col"></div>
               </div>
@@ -184,7 +187,12 @@
               <!--Confirm Password input field-->
               <div class="mb-3">
                 <label for="conf-password" class="form-label">Confirm Password:</label>
-                <input type="password" class="form-control" id="conf-password">
+                <input type="password" class="form-control" id="conf-password" required>
+                <div class="invalid-feedback">Field Cannot be Empty</div>
+              </div>
+              <div class="form-group col-sm-6">
+                <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+                <div class="help-block with-errors"></div>
               </div>
               <span id="matching-message"></span>
 
@@ -192,13 +200,15 @@
               <!--Qualifications Input-->
               <div class="mb-3">
                 <label for="qualifications" class="form-label">Qualifications:</label>
-                <input type="text" class="form-control" id="qualifications">
+                <input type="text" class="form-control" id="qualifications" required>
+                <div class="invalid-feedback">Field Cannot be Empty</div>
               </div>
 
               <!--Experience Input-->
               <div class="mb-3">
                 <label for="experience" class="form-label">Experience:</label>
-                <textarea class="form-control" id="experience" rows="4" cols="50"></textarea>
+                <textarea class="form-control" id="experience" rows="4" cols="50" required></textarea>
+                <div class="invalid-feedback">Field Cannot be Empty</div>
               </div>
               <hr><br>
 
@@ -207,16 +217,17 @@
                 <div class="container-fluid col mb-3">
                     <label for="transport" class="form-label">Do you have your own transport?:</label>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="transport" id="trans-Yes" value="Yes">
+                      <input class="form-check-input" type="radio" name="transport" id="trans-Yes" value="Yes required">
                       <label class="form-check-label" for="transport">
                         Yes
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="transport" id="trans-No" value="No">
+                      <input class="form-check-input" type="radio" name="transport" id="trans-No" value="No" required>
                       <label class="form-check-label" for="transport">
                         No
                       </label>
+                      <div class="invalid-feedback">Please Select a Valid Option</div>
                     </div>
                     </div>
 
@@ -224,14 +235,15 @@
                     <div class="container-fluid col mb-3">
                         <label for="compskills" class="form-label">Do you have Computer Skills?:</label>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="compskills" id="comp-Yes" value="Yes">
+                          <input class="form-check-input" type="radio" name="compskills" id="comp-Yes" value="Yes" required>
                           <label class="form-check-label" for="compskills">
                             Yes
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="compskills" id="comp-No" value="No">
+                          <input class="form-check-input" type="radio" name="compskills" id="comp-No" value="No" required>
                           <label class="form-check-label" for="compskills">No</label>
+                          <div class="invalid-feedback">Please Select a Valid Option</div>
                       </div>
                       </div>
                       </div>
@@ -241,12 +253,13 @@
                       <!--Own Practice Radio Input-->
                     <label for="practice" class="form-label">Do you have your own Practice*</label>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="practice" id="prac-Yes" value="Yes" onclick="showPractice()">
+                    <input class="form-check-input" type="radio" name="practice" id="prac-Yes" value="Yes" onclick="showPractice()" required>
                     <label class="form-check-label" for="practice">Yes</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="practice" id="prac-No" value="No" onclick="hidePractice()">
+                    <input class="form-check-input" type="radio" name="practice" id="prac-No" value="No" onclick="hidePractice()" required>
                     <label class="form-check-label" for="practice">No</label>
+                    <div class="invalid-feedback">Please Select a Valid Option</div>
 
                     <hr><br>
                   <!--Practice Number Input-->
@@ -268,7 +281,14 @@
                 </div>
 
                 <p>Already have an account? <a href="">Log In</a></p>
-                <a href="">Read our terms of service here</a>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to the <a href="">terms and conditions</a>
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
 
               </div>
               
