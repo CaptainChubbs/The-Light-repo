@@ -1,16 +1,15 @@
-//Function to validate the email format to ensure that it is in the right format
-function emailValidation(){
-    value = document.getElementById('email-address').value;
-    apos=value.indexOf("@"); 
-    dotpos=value.lastIndexOf(".");
-    lastpos=value.length-1;
-    if (apos < 1 || dotpos-apos < 2 || lastpos-dotpos > 3 || lastpos-dotpos < 2){
-        document.getElementById("email-error").innerHTML = "Invalid Email Address";
-        return false;
-      } else {
-        return true;
+var forms = document.querySelectorAll(".needs-validation");
+Array.prototype.slice.call(forms).forEach(function(form){
+  form.addEventListener("submit", function(event){
+    if(!form.checkValidity()){
+      event.preventDefault();
+      event.stopPropagation
     }
-  }
+    form.classList.add("was-validated");
+  }, false);
+});
+
+
 
 
 //Function to make the Practice number option disappear if the "Yes" radio button is not checked
@@ -22,6 +21,8 @@ function hidePractice(){
   document.getElementById('box').style.display ='none';
   document.getElementById("prac-No").defaultValue = "Null";
 }
+
+
 
 //Listener actively listening at the radio buttons to see when the "Yes" is clicked
 const radioButtons = document.querySelectorAll('input[name="practice"]');
