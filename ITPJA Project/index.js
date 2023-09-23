@@ -15,13 +15,12 @@ function emailValidation(){
 
 //Function to make the Practice number option disappear if the "Yes" radio button is not checked
 const box = document.getElementById('box');
-
-function handleRadioClick() {
-if (document.getElementById('prac-Yes').checked) {
-box.style.display = 'block';
-} else {
-box.style.display = 'none';
+function showPractice(){
+  document.getElementById('box').style.display ='block';
 }
+function hidePractice(){
+  document.getElementById('box').style.display ='none';
+  document.getElementById("prac-No").defaultValue = "Null";
 }
 
 //Listener actively listening at the radio buttons to see when the "Yes" is clicked
