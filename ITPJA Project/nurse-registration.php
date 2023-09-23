@@ -238,13 +238,14 @@
 
 
                       <!--Own Practice Radio Input-->
-                    <label for="practice" class="form-label">Do you have your own Practice:</label>
+                      <!--Own Practice Radio Input-->
+                    <label for="practice" class="form-label">Do you have your own Practice*</label>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="practice" id="prac-Yes" value="Yes">
+                    <input class="form-check-input" type="radio" name="practice" id="prac-Yes" value="Yes" onclick="showPractice()">
                     <label class="form-check-label" for="practice">Yes</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="practice" id="prac-No" value="No">
+                    <input class="form-check-input" type="radio" name="practice" id="prac-No" value="No" onclick="hidePractice()">
                     <label class="form-check-label" for="practice">No</label>
 
                     <hr><br>
