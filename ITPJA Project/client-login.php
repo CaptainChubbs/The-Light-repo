@@ -1,3 +1,15 @@
+<?php
+//Autoload Classes for autoloading classes in other files without having to include them manually
+require_once 'vendor/autoload.php';
+require_once "config.php";
+
+// Get login url 
+$authUrl = $gClient->createAuthUrl();
+
+// Render google login button 
+$output = '<a href="' . filter_var($authUrl, FILTER_SANITIZE_URL) . '" class="class="btn btn btn-primary btn-flat rounded-0">Sign in with Google</a>';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

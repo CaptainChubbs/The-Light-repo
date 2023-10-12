@@ -10,10 +10,6 @@ include "connect.php";
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include "connect.php";
-
-
-
 
 
 if (!isset($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['password'], $_POST['mobile_number'], $_POST['address'], $_POST['city'], $_POST['administrative_area_level_1'], $_POST['postal_code'], $_POST['qualifications'], $_POST['experience'], $_POST['transport'], $_POST['computer_skills'], $_POST['practice'], $_POST['dispense_number']) && $_POST['password'] != $_POST['confirm_password']) {
