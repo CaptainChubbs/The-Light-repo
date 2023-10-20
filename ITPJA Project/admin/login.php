@@ -1,5 +1,5 @@
 <?php 
-
+  require_once './vendor/autoload.php';
 
   require_once './functions/config_session.inc.php';
   require_once './functions/login_view.inc.php';
@@ -49,31 +49,21 @@
     <!--Nurse Portal Login Page Begins-->
 
 
-            <!--Form Begins-->
-            <form action="./functions/login.inc.php" method="POST" name="login-form">
 
 
 
+            <?php
+//Autoload Classes for autoloading classes in other files without having to include them manually
+require_once 'vendor/autoload.php';
+require_once "./functions/config_login.php";
 
-            <!--Email Address Entry-->
-            <div class="mb-3">
-                <label for="email" class="form-label">Email Address:</label>
-                <input type="email" class="form-control" id="email" name="email">
-              </div>
-              <!--Password Entry-->
-              <div class="mb-3">
-                <label for="password" class="form-label">Password:</label>
-                <input type="password" class="form-control" id="password" name="password">
-              </div>
-              <!--Submit Button-->
-              <div class="text-center pt-2 submit-login">
-                <input type="submit" class="btn" value="Submit">
-              </div>
-              <?php 
-            check_login_errors();
-              ?>
+// Get login url 
+$authUrl = $gClient->createAuthUrl();
 
-            </form>
+// Render google login button 
+$output = '<a href="' . filter_var($authUrl, FILTER_SANITIZE_URL) . '" class="class="btn btn btn-primary btn-flat rounded-0">Sign in with Google</a>';
+echo $output;
+            ?>
 
 
 

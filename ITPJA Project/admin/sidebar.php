@@ -31,16 +31,26 @@
                                 <a href="./nurses.php" class="nav-link px-0"> <i class="fa-sharp fa-solid fa-user-nurse"></i><span class="d-none d-sm-inline"> Nurses</span></a>
                             </li>
                         </ul>
-
+                        <li class="nav-item ">
+                            <a href="./finances.php" class="nav-link align-middle px-0 ">
+                                <i class="fa-sharp fa-solid fa-book-medical"></i> <span class="ms-1 d-none d-sm-inline">Reports</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./event.php" class="nav-link align-middle px-0">
+                                <i class="fa-sharp fa-solid fa-calendar-days"></i> <span class="ms-1 d-none d-sm-inline">Schedule Event</span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="./tasks.php" class="nav-link align-middle px-0">
                                 <i class="fa-sharp fa-solid fa-list-check"></i> <span class="ms-1 d-none d-sm-inline">Assign Tasks</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="./finances.php" class="nav-link align-middle px-0">
+                        <li class="nav-item ">
+                            <a href="./finances.php" class="nav-link align-middle px-0 ">
                                 <i class="fa-sharp fa-solid fa-coins"></i> <span class="ms-1 d-none d-sm-inline">Finances</span>
                             </a>
+                        </li>
                         <li>
                             <a href="./analytics.php" class="nav-link px-0 align-middle">
                                 <i class="fa-sharp fa-solid fa-chart-line"></i> <span class="ms-1 d-none d-sm-inline">Analytics</span> </a>

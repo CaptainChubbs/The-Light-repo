@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+    header('Location: login.php');
+    exit;
+}
 $pageTitle = "Client Data";
 include_once("./head.php");?>
 
@@ -47,9 +52,7 @@ include_once("./head.php");?>
 
                 $get_clients = "SELECT * FROM `client` ORDER BY company_name ASC";
                 $result=mysqli_query($conn,$get_clients);
-                if (mysqli_num_rows($result)==0){
-                    echo "<tr><td colspan='6' class='no-records'>No records found</td></tr>";
-                }else{
+
                 while($row= mysqli_fetch_assoc($result)){
                     $client_id=$row['client_id'];
                     $company_name=$row['company_name'];
@@ -70,7 +73,7 @@ include_once("./head.php");?>
                     </tr>
                     <?php
                 }
-                }
+                
 
                 ?>
 

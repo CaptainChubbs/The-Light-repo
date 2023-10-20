@@ -1,5 +1,5 @@
-<?php 
-include('./includes/connect.php');
+<?php
+include __DIR__.'/./includes/connect.php';
 ?>
 
 <!DOCTYPE html>

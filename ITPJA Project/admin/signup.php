@@ -1,5 +1,9 @@
 <?php 
-
+session_start();
+if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+    header('Location: login.php');
+    exit;
+}
 
   require_once './functions/config_session.inc.php';
   require_once './functions/login_view.inc.php';
