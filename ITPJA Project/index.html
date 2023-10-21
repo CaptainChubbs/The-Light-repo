@@ -13,10 +13,12 @@
             align-items: center;
             padding: 15px 0;
         }
+
         nav {
             display: flex;
             gap: 80px; /* Adjust the value for the desired spacing */
         }
+
         nav a {
             text-decoration: none;
             color: #333; /* Adjust the color as needed */
@@ -29,9 +31,25 @@
         nav a:hover {
             color: #007bff; /* Adjust the color for the hover state */
         }
+
+        section .card-container{
+            background-size: cover;
+            /* margin: 35px 0px; */
+            width: 100%;
+            height: 200px;
+        }
         .card-body {
             border-radius: 115px; /* Adjust the value for the desired curvature */
             overflow: hidden; /* Ensures content stays within the curved corners */
+        }
+
+        footer .container{
+            /* background-color: #f8f9fa;  */
+            width: 100%;
+            text-align: center; /* Optional: Center the content within the footer */
+            padding: 20px 0; /* Add padding to the top and bottom of the footer */
+            bottom: 0;
+            background-size: cover;
         }
     </style>
 </head>
@@ -43,12 +61,12 @@
                 <a href="index.html" class="me-3">Home</a>
                 <a href="about.html" class="me-3">About Us</a>
                 <a href="services.html" class="me-3">Services</a>
-                <a href="team.html" class="me-3">Meet The Team</a>
+                <a href="team.html" class="me-3">Book Now</a>
                 <a href="#" class="me-3 dropdown-toggle" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
                 <ul class="dropdown-menu" aria-labelledby="loginDropdown">
                     <li><a class="dropdown-item" href="client-login.php">Client Login</a></li>
                     <li><a class="dropdown-item" href="nurse-login.html">Nurse Login</a></li>
-                    <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                    <li><a class="dropdown-item" href="admin/login.php">Admin Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,7 +79,7 @@
     </section>
     
     <section class="py-5 bg-light">
-        <div class="container">
+        <div class="card-container">
             <h2 class="text-center mb-4">Who We Are</h2>
             <div class="row">
                 <div class="col-md-4">

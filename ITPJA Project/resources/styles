@@ -2,3 +2,10 @@ nav {
     display: flex;
     gap: 20px; /* Adjust the value for the desired spacing */
 }
+
+footer {
+    /* background-color: #f8f9fa;  */
+    width: 100%;
+    text-align: center; /* Optional: Center the content within the footer */
+    padding: 20px 0; /* Add padding to the top and bottom of the footer */
+}

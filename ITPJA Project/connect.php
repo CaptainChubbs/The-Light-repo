@@ -1,8 +1,8 @@
 <?php
 
-$DB_HOST = '127.0.0.1';
+$DB_HOST = 'localhost';
 $DB_USER = 'root';
-$DB_PW = 'r3zsaturn';
+$DB_PW = '';
 $DB_NAME = 'Abahlengi';
 
 $con = mysqli_connect($DB_HOST, $DB_USER, $DB_PW, $DB_NAME);

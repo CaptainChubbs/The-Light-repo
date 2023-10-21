@@ -1,7 +1,7 @@
 <?php
 include("connect.php");
 require_once('config.php');
-require_once('vendor/autoload.php');
+require_once('vendor/google/auth/autoload.php');
 
 
 if (!isset($_POST['email'], $_POST['password'])) {

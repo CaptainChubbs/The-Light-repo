@@ -102,22 +102,22 @@ $output = '<a href="' . filter_var($authUrl, FILTER_SANITIZE_URL) . '" class="cl
               <!--Forgot Password Option-->
               <p style="margin-bottom: 0;">Forgot Password? <a href="">Click Here</a></p>
               <!--Register Option-->
-              <p>Want to Book your next Wellness Event? <a class="" href="#">Register Here</a></p>   
+              <p>Want to Book your next Wellness Event? <a class="" href="client-registration.php">Register Here</a></p>   
             </form>
         </section>
     <!--Footer Begins Here-->
     <section id="footer">    
         <footer class="bg-light text-center" >
-        <div class="container-fluid fixed-bottom text-center" >
+          <div class="container-fluid text-center" >
             <h2 class="h2" style="color: #fffbe9;">Get In Touch</h2><br>
             <p class="mb-0">Interested in our services?</p>
               <button class="btn text-center">Contact Us</button>            
             <br><br>
             <p class="mb-0">&copy; 2023 Abahlengi. All rights reserved.</p>
 
-        </div>
-    </footer>
-</section>
+          </div>
+        </footer>
+    </section>
 
     <!--Bootstrap Scripting-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
