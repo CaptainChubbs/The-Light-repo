@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+    header('Location: login.php');
+    exit;
+}
 $pageTitle = "Add Nurse";
 include_once("./head.php");?>
 
@@ -280,7 +285,7 @@ if(isset($_POST['insert'])){
         $results_query = mysqli_query($conn,$nurse_insert);
 
         if($results_query){
-            echo "<script>alert('$password')</script>";
+            echo "<script>alert('Successfully Added')</script>";
             echo "<script>window.open('./nurses.php','_self')</script>";
         }
 

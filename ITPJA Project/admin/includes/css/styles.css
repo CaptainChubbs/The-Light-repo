@@ -350,7 +350,7 @@ aside .sidebar a.active i{
     transition: all 300ms ease !important;
     box-shadow: 0 0.5rem 1rem var(--color-light);
 }
-.nurses-table th, td { white-space: nowrap !important; }
+.nurses-table th, td { white-space: nowrap !important; overflow: hidden;}
 .nurses-table div.dataTables_wrapper {
     width: 80% !important;
 }

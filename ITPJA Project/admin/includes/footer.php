@@ -59,7 +59,7 @@
                         labels: ["Gauteng", "Kwazulu-Natal", "Eastern Cape", "Northern Cape", "Western Cape", "Limpopo", "Mpumalanga", "North West", "Free State"],
                         datasets: [{
                         label: "Nurses Per Province",
-                        data: [ 5, 15.58, 11.25, 8.32 , 10.12, 9.54, 7.61, 8.32, 7.61],
+                        data: [ <?php $Gauteng; ?> , 15.58, 11.25, 8.32 , 10.12, 9.54, 7.61, 8.32, 7.61],
                         backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745', '#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b'],
                         }],
                     },
@@ -73,7 +73,7 @@
 
                     //The data for the nurse dataset
                     data: {
-                        labels: ["Blue", "Red", "Yellow", "Green"],
+                        labels: ["Wellness", "At-Home Care", "Wound Care", "Elderly Care"],
                         datasets: [{
                         data: [12.21, 15.58, 11.25, 8.32],
                         backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],

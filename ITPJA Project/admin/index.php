@@ -1,4 +1,36 @@
 <?php 
+include_once("./functions/config_login.php");
+if (isset($_GET['code'])) {
+    $gClient->authenticate($_GET['code']);
+    $_SESSION['token'] = $gClient->getAccessToken();
+    header('Location: ' . filter_var(GOOGLE_REDIRECT_URL, FILTER_SANITIZE_URL));
+}
+
+if (isset($_SESSION['token'])) {
+    $gClient->setAccessToken($_SESSION['token']);
+}
+
+if ($gClient->getAccessToken()) {
+    // Get user profile data from google 
+    $gpUserProfile = $gservice->userinfo->get();
+    $gpUserEmail = $gservice->userinfo->get()->email;
+        //Make an api call to get the user's email address
+        $email = $gpUserEmail;
+    // convert data to json
+    // echo json_encode($gpUserProfile);
+
+    // Initialize User class 
+    $_SESSION['logged_in'] = true;
+    $_SESSION['email'] = $email;
+} else {
+    // Get login url 
+    $authUrl = $gClient->createAuthUrl();
+
+    // Render google login button 
+    $output = '<a href="' . filter_var($authUrl, FILTER_SANITIZE_URL) . '" class="login-btn">Sign in with Google</a>';
+}
+
+
 $pageTitle = "Admin Dashboard";
 include_once("./head.php");?>
 
@@ -68,7 +100,7 @@ include_once("./head.php");?>
                         </div>
                         <div class="card col-md-4 mb-md-0 mb-2">
                             <div class="card-header">
-                                Chart 2
+                                Types of Events being Booked
                             </div>
                             <div class="card-body">
                             <canvas id="pie-chart"></canvas>

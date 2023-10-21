@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+    header('Location: login.php');
+    exit;
+}
 $pageTitle = "Messages";
 include_once("./head.php");?>
 
@@ -28,20 +33,20 @@ include_once("./head.php");?>
     <thead>
     <tr>
         <th class="all">Select</th>
-        <th class="all">Invoice Number</th>
-        <th class="all">Customer Name</th>
-        <th class="all">Services Rendered</th>
-        <th class="all">Amount Due</th>
+        <th class="all">Sender</th>
+        <th class="all">Subject</th>
+        <th class="all">Message</th>
+        <th class="all">Date Received</th>
         <th class="all">Actions</th>
     </tr>
     </thead>
     <tfoot>
     <tr>
         <th class="all">Select</th>
-        <th class="all">Invoice Number</th>
-        <th class="all">Customer Name</th>
-        <th class="all">Services Rendered</th>
-        <th class="all">Amount Due</th>
+        <th class="all">Sender</th>
+        <th class="all">Subject</th>
+        <th class="all">Message</th>
+        <th class="all">Date Received</th>
         <th class="all">Actions</th>
     </tr>
     </tfoot>
@@ -80,22 +85,15 @@ include_once("./head.php");?>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Finance Chart</h4>
-                        </div>
-                        <div class="card-body">
-                            <canvas id="finance-chart"></canvas>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div class="row pt-4">
                 <div class="col-2">
-                    <a href="" class="btn btn-assign">Go to QuickBooks</a>
+                    <a href="" class="btn btn-assign">Read All</a>
                 </div>
                 <div class="col-2">
-                    <a href="" class="btn btn-email">Go to Payfast</a>
+                    <a href="" class="btn btn-email">Delete Selected</a>
                 </div>
             </div>
 
