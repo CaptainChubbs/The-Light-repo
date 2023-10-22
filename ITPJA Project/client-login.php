@@ -84,7 +84,6 @@ $output = '<a href="' . filter_var($authUrl, FILTER_SANITIZE_URL) . '" class="cl
 
             </div>
 
-
             <!--Email Address Entry-->
             <div class="mb-3">
                 <label for="email-login" class="form-label">Email Address:</label>
