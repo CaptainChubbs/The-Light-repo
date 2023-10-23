@@ -49,6 +49,49 @@ if ($gClient->getAccessToken()) {
     $output = '<a href="' . filter_var($authUrl, FILTER_SANITIZE_URL) . '" class="login-btn">Sign in with Google</a>';
 }
 
+// Database connection configuration
+$servername = "ftp.abahlengi.com";
+$username = "admin@abahlengi.com";
+$password = "GjJ*9A;Vjkot";
+$dbname = "";
+
+// Create a database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get user input from the form
+    $id = $_POST['id'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $age = $_POST['age'];
+    $email = $_POST['email'];
+    $phone_number = $_POST['phone_number'];
+    $address = $_POST['address'];
+
+    // Update user details in the database
+    $sql = "UPDATE users SET first_name='$first_name', last_name='$last_name', age=$age, email='$email', phone_number='$phone_number', address='$address' WHERE id=$id";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "User details updated successfully.";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+// Get the user's details from the database
+$id = 1; // Replace with the user's ID
+$sql = "SELECT * FROM users WHERE id=$id";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -82,7 +125,7 @@ if ($gClient->getAccessToken()) {
                 <div class="row">
                     <div class="col-md-6">
                         <h2>User Information</h2>
-                        <form id="user-info-form">
+                        <form id="user-info-form" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                             <div class="form-group">
                                 <label for="username">Name:</label>
                                 <input type="text" class="form-control" id="username" placeholder="Enter username" readonly>
@@ -201,5 +244,12 @@ if ($gClient->getAccessToken()) {
 });
 </script>
 
+<?php
+} else {
+    echo "User not found.";
+}
+
+$conn->close();
+?>
 </body>
 </html>
