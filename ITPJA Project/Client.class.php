@@ -1,6 +1,6 @@
 <?php
 
-class Nurse
+class Client
 {
     public function checkUser($data = array())
     {
@@ -18,24 +18,25 @@ class Nurse
 
             if ($checkResult->num_rows > 0) {
                 // Prepare column and value format 
+                // update user data in your database when a user already exists (based on the OAuth provider and ID)
                 echo "User exists";
-                // $colvalSet = '';
-                // $i = 0;
-                // foreach ($data as $key => $val) {
-                //     $pre = ($i > 0) ? ', ' : '';
-                //     $colvalSet .= $pre . $key . "='" . $con->real_escape_string($val) . "'";
-                //     $i++;
-                // }
-                // $whereSql = " WHERE oAuthProvider = '" . $data['oAuthProvider'] . "' AND oAuthId = '" . $data['oAuthId'] . "'";
+                $colvalSet = '';
+                $i = 0;
+                foreach ($data as $key => $val) {
+                    $pre = ($i > 0) ? ', ' : '';
+                    $colvalSet .= $pre . $key . "='" . $con->real_escape_string($val) . "'";
+                    $i++;
+                }
+                $whereSql = " WHERE oAuthProvider = '" . $data['oAuthProvider'] . "' AND oAuthId = '" . $data['oAuthId'] . "'";
 
                 // // Update user data in the database 
-                // $query = "UPDATE client SET " . $colvalSet . $whereSql;
-                // $update = $con->query($query);
+                $query = "UPDATE client SET " . $colvalSet . $whereSql;
+                $update = $con->query($query);
             } else {
                 // Add created time to the data array 
-                // if (!array_key_exists('created', $data)) {
-                //     $data['createdAt'] = date("Y-m-d H:i:s");
-                // }
+                if (!array_key_exists('created', $data)) {
+                    $data['createdAt'] = date("Y-m-d H:i:s");
+                }
 
                 // Prepare column and value format 
                 $columns = $values = '';

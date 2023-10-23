@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/google/auth/autoload.php';
+require_once 'vendor/autoload.php';
 include "connect.php";
 
 // Google API configuration

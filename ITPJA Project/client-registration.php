@@ -87,66 +87,50 @@ require_once 'config.php';
             </div>
 
 
-            <!--Company Name Input-->
+            <!-- Name and Surname Inputs -->
             <div class="row">
-              <div class="col mb-3">
-                <label for="first-name" class="form-label">Company Name:</label>
-                <input type="text" class="form-control" id="first-name" required>
-                <div class="invalid-feedback">Field Cannot be Empty</div>
-              </div>
-            <!-- Email Address Input-->
-              <div class="mb-3" data-validate="email">
-                <label for="email-address" class="form-label">Email Address:</label>
-                <input type="email" class="form-control email-add" id="email-address" required>
-                <span class="valid-feedback"><i class="fa fa-check"></i> Valid Email</span>
-                <span id="invalid-email" class="invalid-feedback"><i class="fa fa-times"></i> Enter a Valid Email Address</span>
-              </div>
-              <!--Mobile Number Input-->
-              <div class="mb-3">
-                <label for="work-number" class="form-label">Work Number:</label>
-                <input type="tel" class="form-control" id="work-number" required minlength="10">
-                <div class="invalid-feedback">Field Cannot be Empty</div>
-              </div>
-              <hr><br>
-              <div class="row">
-                <div class="mb-3 col">
+                    <div class="col-md-6 mb-3">
+                        <label for="first-name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="first-name" required>
+                        <div class="invalid-feedback">Field Cannot be Empty</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="last-name" class="form-label">Surname:</label>
+                        <input type="text" class="form-control" id="last-name" required>
+                        <div class="invalid-feedback">Field Cannot be Empty</div>
+                    </div>
+                </div>
 
-                  <!--Address Input-->
-                  <label for="location-input" class="form-label">Address Line 1:</label>
-                  <input type="text" placeholder="" class="form-control" id="location-input" name="location-input" required/>
-                  <div class="invalid-feedback">Field Cannot be Empty</div>
+                <!-- Age Input -->
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age:</label>
+                    <input type="number" class="form-control" id="age" required>
+                    <div class="invalid-feedback">Field Cannot be Empty</div>
                 </div>
-                <div class="mb-3 col">
-                  <label for="locality-input2" class="form-label">Address Line 2:</label>
-                  <input type="text" class="form-control" placeholder="" name="locality-input2"/>
+
+                <!-- Email Input -->
+                <div class="mb-3" data-validate="email">
+                    <label for="email-address" class="form-label">Email Address:</label>
+                    <input type="email" class="form-control email-add" id="email-address" required>
+                    <span class="valid-feedback"><i class="fa fa-check"></i> Valid Email</span>
+                    <span id="invalid-email" class="invalid-feedback"><i class="fa fa-times"></i> Enter a Valid Email Address</span>
                 </div>
-              </div>
-              <!--City Input-->
-              <div class="row">
-                <div class="mb-3 col">
-                  <label for="locality-input" class="form-label">City:</label>
-                  <input type="text" class="form-control" placeholder="" id="locality-input" name="locality-input" required/>
-                  <div class="invalid-feedback">Field Cannot be Empty</div>
+
+                <!-- Number Input -->
+                <div class="mb-3">
+                    <label for="phone-number" class="form-label">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone-number" required minlength="10">
+                    <div class="invalid-feedback">Field Cannot be Empty</div>
                 </div>
-                <!--Province Input-->
-                <div class="mb-3 col">
-                  <label for="administrative_area_level_1-input" class="form-label">Province:</label>
-                  <input type="text" class="half-input form-control" placeholder="" id="administrative_area_level_1-input" name="administrative_area_level_1-input" required/>
-                  <div class="invalid-feedback">Field Cannot be Empty</div>
+
+                <!-- Address Inputs -->
+                <div class="row">
+                    <div class="col mb-3">
+                        <label for="address" class="form-label">Address:</label>
+                        <input type="text" class="form-control" id="address" required>
+                        <div class="invalid-feedback">Field Cannot be Empty</div>
+                    </div>
                 </div>
-              </div>
-              <!--Postal Code Input-->
-              <div class="row">
-                <div class="mb-3 col">
-                  <label for="postal_code-input" class="form-label">Postal Code:</label>
-                  <input type="text" class="half-input form-control" placeholder="" id="postal_code-input" name="postal_code-input" required/>
-                  <div class="invalid-feedback">Field Cannot be Empty</div>
-                </div>
-                <div class="mb-3 col"></div>
-              </div>
-              <!--Connecting to Google Maps for Autocompletion API-->
-              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrYOKQrKnN_OgxZau_JUvI4MjyJU-WBHE&libraries=places&callback=initMap&solution_channel=GMP_QB_addressselection_v1_cA" async defer></script>
-              <hr><br>
 
               <!--Password Input-->
               <label for="inputPassword" class="form-label">Password</label>
@@ -196,15 +180,14 @@ require_once 'config.php';
 
               <hr><br>
 
-
-
                   <!--Submit Button-->
                   <div class="text-center" style="padding-bottom: 20px;">
-                    <button class="btn" type="submit">Register</button>
+                    <a href="<?php echo $gClient->createAuthUrl(['redirect_uri' => 'https://admin.abahlengi.com/index.php']) ?>" class="btn btn btn-primary btn-flat rounded-0">Register with Google</a>
                   </div>
                 </div>
+                
+                <p>Already have an account? <a href="client-login.php">Log In</a></p>
 
-                <p>Already have an account? <a href="">Log In</a></p>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                   <label class="form-check-label" for="invalidCheck">
