@@ -1,0 +1,650 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nurse-dashboard.css" />
+    <title>Nurse Dashboard</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- side navigation -->
+
+      <aside class="side-nav">
+        <div class="logo">Abahlengi</div>
+
+        <!-- Profile -->
+        <div class="profile__container">
+          <img
+            src="https://i.pravatar.cc/300"
+            id="profile-picture"
+            alt="Profile picture"
+          />
+          <p class="greetings">Welcome back,</p>
+          <h2 class="user-name">John Doe</h2>
+        </div>
+
+        <!-- Nav links -->
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-link">
+              <a href="#"
+                ><i class="fa-solid fa-gauge" style="color: #ffffff"></i>
+                Dashboard</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="#"
+                ><i
+                  class="fa-solid fa-calendar-days"
+                  style="color: #ffffff"
+                ></i>
+                Schedules</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="#"
+                ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
+                Information</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="#"
+                ><i class="fa-solid fa-message" style="color: #ffffff"></i>
+                Messages</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="#"
+                ><i class="fa-solid fa-gear" style="color: #ffffff"></i>
+                Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <a href="logout.php" class="link__bottom"
+          ><i class="fa-solid fa-right-from-bracket" style="color: #ffffff"></i>
+          Log Out</a
+        >
+      </aside>
+
+      <!-- Main section -->
+      <!-- Page contents goes here -->
+      <main class="main-section">
+        <div class="header__main">
+          <h2 class="user-name_greet">Hello, John</h2>
+          <p class="date">Today is Wednesday, 04 October 2023</p>
+        </div>
+
+        <div class="profile-box__container">
+          <div class="box__container">
+            <div class="flex-auto">
+              <article class="">
+                <main class="my-account-box__container">
+                  <div class="profile-summary">
+                    <div class="data-element">
+                      <div class="flex-auto">
+                        <div>
+                          <label class="data-label">Name</label>
+                          <div class="user-data">John</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Surname</label>
+                          <div class="user-data">Doe</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div>
+                        <label class="data-label">Email</label>
+                        <div class="user-data">john.doe@mail.com</div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Mobile number</label>
+                          <div class="user-data">0123456789</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="flex-auto">
+                        <div>
+                          <label class="data-label">Birthday</label>
+                          <div class="user-data">00/00/0000</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Address Line 1</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Address Line 2</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">City</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Province</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Password</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Qualifications</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Experience</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Possess Transport</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label"
+                            >Possess Computer Skills</label
+                          >
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Possess Own Practice</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data-element">
+                      <div class="el-w-50">
+                        <div>
+                          <label class="data-label">Dispensing Number</label>
+                          <div class="user-data"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+                <footer class="vtex-my-account-1-x-boxContainerFooter">
+                  <button class="btn edit-btn">Edit</button>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="edit-data__container">
+          <!--Nurse Portal Login Page Begins-->
+          <section id="nurse-login">
+            <div class="" style="padding: 50px 0">
+              <!--Form Begins-->
+              <form
+                action="register-nurse.php"
+                method="post"
+                class="was-validated"
+                role="form"
+                data-toggle="validator"
+                novalidate
+              >
+                <!--First & Last Name Input-->
+                <div class="row">
+                  <div class="col mb-3">
+                    <label for="first_name" class="form-label"
+                      >First Name:</label
+                    >
+                    <input
+                      name="first_name"
+                      type="text"
+                      class="form-control"
+                      id="first-name"
+                      required
+                    />
+                    <div class="invalid-feedback">Field Cannot be Empty</div>
+                  </div>
+                  <div class="col mb-3">
+                    <label for="last_name" class="form-label">Last Name:</label>
+                    <input
+                      name="last_name"
+                      type="text"
+                      class="form-control"
+                      id="last-name"
+                      required
+                    />
+                    <div class="invalid-feedback">Field Cannot be Empty</div>
+                  </div>
+                </div>
+                <!-- Email Address Input-->
+                <div class="mb-3" data-validate="email">
+                  <label for="email" class="form-label">Email Address:</label>
+                  <input
+                    name="email"
+                    type="email"
+                    class="form-control email-add"
+                    id="email-address"
+                    required
+                  />
+                  <span class="valid-feedback"
+                    ><i class="fa fa-check"></i> Valid Email</span
+                  >
+                  <span id="invalid-email" class="invalid-feedback"
+                    ><i class="fa fa-times"></i> Enter a Valid Email
+                    Address</span
+                  >
+                </div>
+                <!--Mobile Number Input-->
+                <div class="mb-3">
+                  <label for="mobile_number" class="form-label"
+                    >Mobile Number:</label
+                  >
+                  <input
+                    name="mobile_number"
+                    type="tel"
+                    class="form-control"
+                    id="mobile-number"
+                    required
+                    minlength="10"
+                  />
+                  <div class="invalid-feedback">Field Cannot be Empty</div>
+                </div>
+                <hr />
+                <br />
+                <div class="row">
+                  <div class="mb-3 col">
+                    <!--Address Input-->
+                    <label for="address" class="form-label"
+                      >Address Line 1:</label
+                    >
+                    <input
+                      type="text"
+                      placeholder=""
+                      class="form-control"
+                      id="location-input"
+                      name="address"
+                      required
+                    />
+                    <div class="invalid-feedback">Field Cannot be Empty</div>
+                  </div>
+                  <div class="mb-3 col">
+                    <label for="address-2" class="form-label"
+                      >Address Line 2:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder=""
+                      name="address-2"
+                    />
+                  </div>
+                </div>
+                <!--City Input-->
+                <div class="row">
+                  <div class="mb-3 col">
+                    <label for="city" class="form-label">City:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder=""
+                      id="locality"
+                      name="city"
+                      required
+                    />
+                    <div class="invalid-feedback">Field Cannot be Empty</div>
+                  </div>
+                  <!--Province Input-->
+                  <div class="mb-3 col">
+                    <label for="administrative_area_level_1" class="form-label"
+                      >Province:</label
+                    >
+                    <input
+                      type="text"
+                      class="half-input form-control"
+                      placeholder=""
+                      id="administrative_area_level_1-input"
+                      name="administrative_area_level_1"
+                      required
+                    />
+                    <div class="invalid-feedback">Field Cannot be Empty</div>
+                  </div>
+                </div>
+                <!--Postal Code Input-->
+                <div class="row">
+                  <div class="mb-3 col">
+                    <label for="postal_code" class="form-label"
+                      >Postal Code:</label
+                    >
+                    <input
+                      type="text"
+                      class="half-input form-control"
+                      placeholder=""
+                      id="postal_code-input"
+                      name="postal_code"
+                      required
+                    />
+                    <div class="invalid-feedback">Field Cannot be Empty</div>
+                  </div>
+                  <div class="mb-3 col"></div>
+                </div>
+                <!--Connecting to Google Maps for Autocompletion API-->
+                <script
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrYOKQrKnN_OgxZau_JUvI4MjyJU-WBHE&libraries=places&callback=initMap&solution_channel=GMP_QB_addressselection_v1_cA"
+                  async
+                  defer
+                ></script>
+                <hr />
+                <br />
+
+                <!--Password Input-->
+                <label for="password" class="form-label">Password</label>
+                <input
+                  name="password"
+                  type="password"
+                  id="inputPassword"
+                  class="form-control"
+                  aria-describedby="passwordHelpBlock"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  required
+                />
+                <!--Password Instructions-->
+                <div id="passwordHelpBlock" class="form-text">
+                  Your password must be 8-20 characters long, contain letters,
+                  special characters and numbers, and must not contain spaces,
+                  or emoji.
+                </div>
+                <br />
+
+                <!--Password Validation-->
+                <div class="valid-feedback">Valid Password</div>
+                <div class="invalid-feedback">Invalid Password</div>
+
+                <!--Password Creation Criteria-->
+                <div class="col-6 mt-4 mt-xxl-0 w-auto h-auto">
+                  <div
+                    class="alert px-4 py-3 mb-0 d-none"
+                    role="alert"
+                    data-mdb-color="warning"
+                    id="password-alert"
+                  >
+                    <ul class="list-unstyled mb-0">
+                      <li class="requirements leng">
+                        <i class="fas fa-check text-success me-2"></i>
+                        <i class="fas fa-times text-danger me-3"></i>
+                        Your password must have at least 8 characters
+                      </li>
+                      <li class="requirements big-letter">
+                        <i class="fas fa-check text-success me-2"></i>
+                        <i class="fas fa-times text-danger me-3"></i>
+                        Your password must have at least 1 uppercase letter.
+                      </li>
+                      <li class="requirements num">
+                        <i class="fas fa-check text-success me-2"></i>
+                        <i class="fas fa-times text-danger me-3"></i>
+                        Your password must have at least 1 number.
+                      </li>
+                      <li class="requirements special-char">
+                        <i class="fas fa-check text-success me-2"></i>
+                        <i class="fas fa-times text-danger me-3"></i>
+                        Your password must have at least 1 special character.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <br />
+                <!--Confirm Password input field-->
+                <div class="mb-3">
+                  <label for="confirm_password" class="form-label"
+                    >Confirm Password:</label
+                  >
+                  <input
+                    name="confirm_password"
+                    type="password"
+                    class="form-control"
+                    id="conf-password"
+                    required
+                  />
+                  <div class="invalid-feedback">Field Cannot be Empty</div>
+                </div>
+
+                <span id="matching-message"></span>
+
+                <hr />
+                <br />
+                <!--Qualifications Input-->
+                <div class="mb-3">
+                  <label for="qualifications" class="form-label"
+                    >Qualifications:</label
+                  >
+                  <input
+                    name="qualifications"
+                    type="text"
+                    class="form-control"
+                    id="qualifications"
+                    required
+                  />
+                  <div class="invalid-feedback">Field Cannot be Empty</div>
+                </div>
+
+                <!--Experience Input-->
+                <div class="mb-3">
+                  <label for="experience" class="form-label">Experience:</label>
+                  <textarea
+                    name="experience"
+                    class="form-control"
+                    id="experience"
+                    rows="4"
+                    cols="50"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Field Cannot be Empty</div>
+                </div>
+                <hr />
+                <br />
+
+                <!--Transport Radio Input-->
+                <div class="row">
+                  <div class="container-fluid col mb-3">
+                    <label for="transport" class="form-label"
+                      >Do you have your own transport?:</label
+                    >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="transport"
+                        id="trans-Yes"
+                        value="1"
+                        required
+                      />
+                      <label class="form-check-label" for="transport">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="transport"
+                        id="trans-No"
+                        value="0"
+                        required
+                      />
+                      <label class="form-check-label" for="transport">
+                        No
+                      </label>
+                      <div class="invalid-feedback">
+                        Please Select a Valid Option
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Computer Skills Radio Input-->
+                  <div class="container-fluid col mb-3">
+                    <label for="computer_skills" class="form-label"
+                      >Do you have Computer Skills?:</label
+                    >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="computer_skills"
+                        id="comp-Yes"
+                        value="1"
+                        required
+                      />
+                      <label class="form-check-label" for="computer_skills">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="computer_skills"
+                        id="comp-No"
+                        value="0"
+                        required
+                      />
+                      <label class="form-check-label" for="computer_skills"
+                        >No</label
+                      >
+                      <div class="invalid-feedback">
+                        Please Select a Valid Option
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Own Practice Radio Input-->
+                <!--Own Practice Radio Input-->
+                <label for="practice" class="form-label"
+                  >Do you have your own Practice*</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="practice"
+                    id="prac-Yes"
+                    value="1"
+                    onclick="showPractice()"
+                    required
+                  />
+                  <label class="form-check-label" for="practice">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="practice"
+                    id="prac-No"
+                    value="0"
+                    onclick="hidePractice()"
+                    required
+                  />
+                  <label class="form-check-label" for="practice">No</label>
+                  <div class="invalid-feedback">
+                    Please Select a Valid Option
+                  </div>
+
+                  <hr />
+                  <br />
+                  <!--Practice Number Input-->
+                  <div class="mb-3" id="box">
+                    <label for="practice_number" class="form-label"
+                      >Practice Number:</label
+                    >
+                    <input
+                      name="practice_number"
+                      type="text"
+                      class="form-control"
+                      id="prac-number"
+                    />
+                  </div>
+
+                  <!--Dispensing Number Input-->
+                  <div class="mb-3">
+                    <label for="dispense_number" class="form-label"
+                      >Dispensing Number:</label
+                    >
+                    <input
+                      name="dispense_number"
+                      type="text"
+                      class="form-control"
+                      id="dispense-number"
+                    />
+                  </div>
+                  <hr />
+                </div>
+                <div class="form-btns">
+                  <button id="cancel-form" class="btn">Cancel</button>
+                  <button id="save-form" class="btn">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+        <!-- Add fuctionality to only allow edit once the edit button has been clicked -->
+      </main>
+    </div>
+  </body>
+</html>

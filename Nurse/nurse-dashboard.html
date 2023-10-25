@@ -1,0 +1,185 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-oauth-token" content="YOUR_OAUTH_TOKEN_HERE" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nurse-dashboard.css" />
+    <title>Nurse Dashboard</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- side navigation -->
+      <aside class="side-nav">
+        <div class="logo">Abahlengi</div>
+
+        <!-- Profile -->
+        <div class="profile__container">
+          <img
+            src="https://i.pravatar.cc/300"
+            id="profile-picture"
+            alt="Profile picture"
+          />
+          <p class="greetings">Welcome back,</p>
+          <h2 class="user-name">John Doe</h2>
+        </div>
+
+        <!-- Nav links -->
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-link">
+              <a href="#"
+                ><i class="fa-solid fa-gauge" style="color: #ffffff"></i>
+                Dashboard</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="#"
+                ><i
+                  class="fa-solid fa-calendar-days"
+                  style="color: #ffffff"
+                ></i>
+                Schedules</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="#"
+                ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
+                Information</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="#"
+                ><i class="fa-solid fa-message" style="color: #ffffff"></i>
+                Messages</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="#"
+                ><i class="fa-solid fa-gear" style="color: #ffffff"></i>
+                Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <a href="logout.php" class="link__bottom"
+          ><i class="fa-solid fa-right-from-bracket" style="color: #ffffff"></i>
+          Log Out</a
+        >
+      </aside>
+
+      <!-- Main section -->
+      <!-- Page contents goes here -->
+      <main class="main-section">
+        <div class="header__main">
+          <h2 class="user-name_greet">Hello, John</h2>
+          <p class="date">Today is Wednesday, 04 October 2023</p>
+        </div>
+
+        <section class="earnings card top-card">
+          <h2 class="section__title">Earnings</h2>
+          <div class="card__content">
+            <h3>R0.00</h3>
+          </div>
+        </section>
+        <section class="notifications card top-card">
+          <h2 class="section__title">Notifications</h2>
+          <div class="card__content">
+            <h3>0</h3>
+            <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+          </div>
+        </section>
+        <section class="schedules card top-card">
+          <h2 class="section__title">Schedules</h2>
+          <div class="card__content">
+            <h3>0</h3>
+            <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+          </div>
+        </section>
+        <section class="notifications card top-card">
+          <h2 class="section__title">Notifications</h2>
+          <div class="card__content">
+            <h3>0</h3>
+            <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+          </div>
+        </section>
+
+        <!-- Upcoming events section: Improve it and style it using the nurse-dashboard.css  -->
+
+        <!-- <section class="upcoming__events card">
+          <h2 class="section__title">Upcoming Events</h2>
+          <div class="events">
+            <div class="event">
+              <img src="https://placehold.co/600x400" alt="" />
+              <div class="event__info">
+                <h4 class="event__title">Lorem ipsum dolor sit</h4>
+                <p class="event__date">00/00/0000</p>
+                <p class="event__detail">
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+              </div>
+            </div>
+            <div class="event">
+              <img src="https://placehold.co/600x400" alt="" />
+              <div class="event__info">
+                <h4 class="event__title">Lorem ipsum dolor sit</h4>
+                <p class="event__date">00/00/0000</p>
+                <p class="event__detail">
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+              </div>
+            </div>
+            <div class="event">
+              <img src="https://placehold.co/600x400" alt="" />
+              <div class="event__info">
+                <h4 class="event__title">Lorem ipsum dolor sit</h4>
+                <p class="event__date">00/00/0000</p>
+                <p class="event__detail">
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+        <!-- End of Upcoming events section -->
+
+
+        <!-- Add a to-do or task list -->
+
+
+        <!-- Add a messages widget -->
+
+      </main>
+    </div>
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="gapiLoaded()"
+    ></script>
+    <script
+      async
+      defer
+      src="https://accounts.google.com/gsi/client"
+      onload="gisLoaded()"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
