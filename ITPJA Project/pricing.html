@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - Nurse Procurement Service</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+    <!--Importing Font Awesome Icons-->
+    <!-- <script src="https://kit.fontawesome.com/bdd911af05.js" crossorigin="anonymous"></script> -->
+
+    <!-- <script src="index.js"></script> -->
     <style>
         header {
             display: flex;
@@ -29,33 +37,55 @@
         nav a:hover {
             color: #007bff; /* Adjust the color for the hover state */
         }
-        .dropdown{
-            background-color: black;
-        }
         
         footer{
             background-color: #CCD6A6;
         }
+
+        hr.border-3 {
+            border: 1px solid #798A70; /* You can adjust the border style */
+            margin: 10px 0; /* Adjust the margin as needed */
+        }
     </style>
 </head>
 <body>
-    <header class="border-bottom py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="h4">Abahlengi</h1>
-            <nav>
-                <a href="index.html" class="me-3">Home</a>
-                <a href="about.html" class="me-3">About Us</a>
-                <a href="services.html" class="me-3">Services</a>
-                <a href="team.html" class="me-3">Book Now</a>
-                <a href="#" class="me-3 dropdown-toggle" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
-                <ul class="dropdown-menu" aria-labelledby="loginDropdown">
-                    <li><a class="dropdown-item" href="client-login.php">Client Login</a></li>
-                    <li><a class="dropdown-item" href="nurse-login.html">Nurse Login</a></li>
-                    <li><a class="dropdown-item" href="admin/login.php">Admin Login</a></li>
-                </ul>
-            </nav>
-        </div>
+
+    <!--Navigation Bar Begins-->
+    <header class="border-bottom py-3" >
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!--Navbar Heading-->
+              <a class="navbar-brand" href="#" style="color: #798A70;"><h1 class="h2">Abahlengi</h1></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!--Navbar Items-->
+              <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link px-5" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link px-5" href="about.html">About Us</a>
+                  <a class="nav-link px-5" href="services.html">Services</a>
+                  <a class="nav-link px-5" href="client-registration.php">Book Now</a>
+                  <li class="nav-item dropdown px-5">
+
+                    <!--Navbar Login Dropdowns-->
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Login Here
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="client-registration.php">Client Sign Up</a></li>
+                    <li><a class="dropdown-item" href="nurse-registration.php">Nurse Sign Up</a></li>
+                    </ul>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </nav>
     </header>
+
+    <!--Green Line Separating Navbar with Body Content-->
+    <hr class=" border-3 opacity-100" style="color: #798A70; margin: 0;">
     
     <section class="py-5">
         <div class="container">
@@ -183,14 +213,17 @@
         </div>
     </section>
 
-    <footer class="bg-light text-center py-3">
-        <div class="container">
-            <p class="mb-0">&copy; 2023 Nurse Procurement Service. All rights reserved.</p>
-            <p class="mb-0"><strong>Get in touch</strong></p>
-            <p class="mb-0">Interested in our services</p>
-            <a href="contacts.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </footer>
+    <section id="footer">    
+        <footer class="bg-light text-center" >
+          <div class="container-fluid text-center" >
+            <h2 class="h2" style="color: #fffbe9;">Get In Touch</h2><br>
+            <p class="mb-0">Interested in our services?</p>
+            <button class="btn text-center">Contact Us</button>            
+            <br><br>
+            <p class="mb-0">&copy; 2023 Abahlengi. All rights reserved.</p>
+          </div>
+        </footer>
+      </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>

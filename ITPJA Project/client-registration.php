@@ -50,7 +50,7 @@ require_once 'config.php';
                   <a class="nav-link px-5" aria-current="page" href="index.html">Home</a>
                   <a class="nav-link px-5" href="about.html">About Us</a>
                   <a class="nav-link px-5" href="services.html">Services</a>
-                  <a class="nav-link px-5" href="team.html">Meet the Team</a>
+                  <a class="nav-link px-5" href="client-registration.php">Book Now</a>
                   <li class="nav-item dropdown px-5">
 
                     <!--Navbar Login Dropdowns-->
@@ -58,8 +58,8 @@ require_once 'config.php';
                       Login Here
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="client-login.php">Client Login</a></li>
-                      <li><a class="dropdown-item" href="nurse-login.php">Nurse Login</a></li>
+                    <li><a class="dropdown-item" href="client-registration.php">Client Sign Up</a></li>
+                    <li><a class="dropdown-item" href="nurse-registration.php">Nurse Sign Up</a></li>
                     </ul>
                   </li>
                 </div>
@@ -202,18 +202,17 @@ require_once 'config.php';
             </form>
         </section>
 
-        <section id="footer">    
+      <section id="footer">    
         <footer class="bg-light text-center" >
           <div class="container-fluid text-center" >
             <h2 class="h2" style="color: #fffbe9;">Get In Touch</h2><br>
             <p class="mb-0">Interested in our services?</p>
-              <button class="btn text-center">Contact Us</button>            
+            <button class="btn text-center">Contact Us</button>            
             <br><br>
             <p class="mb-0">&copy; 2023 Abahlengi. All rights reserved.</p>
-
           </div>
         </footer>
-    </section>
+      </section>
 
     <!--Bootstrap Scripting-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
