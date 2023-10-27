@@ -27,3 +27,6 @@ chat.spaces.list(
     }
   }
 );
+
+const accessToken = '<?php echo $_SESSION["access_token"]; ?>';
+

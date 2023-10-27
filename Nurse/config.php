@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once './ITPJA Project/vendor/autoload.php';
 include "connect.php";
 
 // Google API configuration
@@ -21,6 +21,13 @@ $gClient->setRedirectUri(GOOGLE_REDIRECT_URL);
 $gClient->addScope('email');
 $gClient->addScope('profile');
 $gClient->addScope('https://www.googleapis.com/auth/calendar');
+$gClient->addScope('https://www.googleapis.com/auth/chat.bot');
+$gClient->addScope('https://www.googleapis.com/auth/chat.read');
 
 
 $gservice = new Google_Service_Oauth2($gClient);
+
+// Get the access token
+if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
+    $gClient->setAccessToken($_SESSION['access_token']);
+}

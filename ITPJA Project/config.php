@@ -5,7 +5,7 @@ include "connect.php";
 // Google API configuration
 define('GOOGLE_CLIENT_ID', '1053196319965-irhs4pprplgm8uk9nrunj3esqmlvsmpt.apps.googleusercontent.com');
 define('GOOGLE_CLIENT_SECRET', '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');
-define('GOOGLE_REDIRECT_URL', 'https://www.admin.abahlengi.com/index.php');
+define('GOOGLE_REDIRECT_URL', 'https://www.abahlengi.com/index.php');
 
 // Start session
 if (!session_id()) {

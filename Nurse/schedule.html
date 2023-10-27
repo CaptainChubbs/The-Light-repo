@@ -19,6 +19,35 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="nurse-dashboard.css" />
     <title>Nurse Dashboard</title>
+    <style>
+      main {
+        background-color: #fffbe9;
+      }
+      .logo{
+        background-color: #798A70;
+      }
+      .profile__container{
+        background-color: #798A70;
+      }
+      .greetings{
+        background-color: #798A70;
+      }
+      .user-name{
+        background-color: #798A70;
+      }
+      .side-nav {
+        background-color: #798A70;
+      }
+      .nav-list{
+        background-color: #798A70;
+      }
+      .nav-link a{
+        background-color: #798A70;
+      }
+      .link__bottom{
+        background-color: #798A70;
+      }
+    </style>
   </head>
   <body>
     <div class="wrap">
@@ -41,13 +70,13 @@
         <nav class="main-nav">
           <ul class="nav-list">
             <li class="nav-link">
-              <a href="#"
+              <a href="nurse-dashboard.html"
                 ><i class="fa-solid fa-gauge" style="color: #ffffff"></i>
                 Dashboard</a
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="schedule.html"
                 ><i
                   class="fa-solid fa-calendar-days"
                   style="color: #ffffff"
@@ -56,13 +85,13 @@
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="personal-details.html"
                 ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
                 Information</a
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="messages.html"
                 ><i class="fa-solid fa-message" style="color: #ffffff"></i>
                 Messages</a
               >
@@ -96,16 +125,67 @@
           <div class="cal-modal-container">
             <div class="cal-modal">
 
-              <!-- Show upcoming events -->
-              <h3>UPCOMING EVENTS</h3>
-              <div id="calendar">
-                <div class="placeholder"></div>
-                <div class="calendar-events"></div>
-              </div>
+        <!-- Upcoming Events Widget -->
+        <div class="upcoming-events-widget">
+          <h3>Upcoming Events</h3>
+          <div class="event-box">
+            <div class="event-details">
+              <h4>Event 1</h4>
+              <p>Date: October 10, 2023</p>
+              <p>Time: 2:00 PM - 4:00 PM</p>
             </div>
+            <div class="event-location">
+              <!-- Display the map location here (e.g., using Google Maps) -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.6337284982434!2d-34.397!3d150.644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDAwJzA3LjYiTiAxMDLCsDU2JzI2LjMiRQ!5e1!3m2!1sen!2sus!4vYourMapID!&output=embed"
+                width="250"
+                height="150"
+                frameborder="0"
+                style="border: 0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+          <div class="event-box">
+            <div class="event-details">
+              <h4>Event 2</h4>
+              <p>Date: October 15, 2023</p>
+              <p>Time: 3:00 PM - 5:00 PM</p>
+            </div>
+            <div class="event-location">
+              <!-- Display the map location here (e.g., using Google Maps) -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.6337284982434!2dYourLongitude!3dYourLatitude!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDAwJzA3LjYiTiAxMDLCsDU2JzI2LjMiRQ!5e1!3m2!1sen!2us!4vYourMapID!&output=embed"
+                width="250"
+                height="150"
+                frameborder="0"
+                style="border: 0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calendar Widget -->
+        <div class="calendar-widget">
+          <h3>Calendar</h3>
+          <div id="calendar">
+            <!-- Display your scheduled events on the calendar (you can use a library like FullCalendar.js) -->
           </div>
         </div>
       </main>
     </div>
+
+    <!-- Add your JavaScript for the event and calendar widgets here -->
+    <script src="maps.js">
+      // Your JavaScript code for the widgets goes here
+    </script>
   </body>
 </html>
+
+
+

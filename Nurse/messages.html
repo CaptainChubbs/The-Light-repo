@@ -16,9 +16,83 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
     <link rel="stylesheet" href="nurse-dashboard.css" />
     <title>Nurse Dashboard</title>
+    <style>
+      main {
+        background-color: #fffbe9;
+      }
+      .logo{
+        background-color: #798A70;
+      }
+      .profile__container{
+        background-color: #798A70;
+      }
+      .greetings{
+        background-color: #798A70;
+      }
+      .user-name{
+        background-color: #798A70;
+      }
+      .side-nav {
+        background-color: #798A70;
+      }
+      .nav-list{
+        background-color: #798A70;
+      }
+      .nav-link a{
+        background-color: #798A70;
+      }
+      .link__bottom{
+        background-color: #798A70;
+      }
+      .chat-messages {
+        padding: 10px;
+      }
+
+      /* Message styles (you can customize these further) */
+      .message {
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+
+      .message.received {
+        background-color: #e2e2e2;
+      }
+      .message.sent {
+        background-color: #3e8cd5;
+        color: #fff;
+      }
+
+      /* Input box styles */
+      .input-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .input-box input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+
+      .input-box button {
+        background-color: #3e8cd5;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 15px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div class="wrap">
@@ -41,13 +115,13 @@
         <nav class="main-nav">
           <ul class="nav-list">
             <li class="nav-link">
-              <a href="#"
+              <a href="nurse-dashboard.html"
                 ><i class="fa-solid fa-gauge" style="color: #ffffff"></i>
                 Dashboard</a
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="schedule.html"
                 ><i
                   class="fa-solid fa-calendar-days"
                   style="color: #ffffff"
@@ -56,13 +130,13 @@
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="personal-details.html"
                 ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
                 Information</a
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="messages.html"
                 ><i class="fa-solid fa-message" style="color: #ffffff"></i>
                 Messages</a
               >
@@ -104,12 +178,66 @@
             </div>
             <!-- Add more messages here -->
           </div>
+      
+          <div class="chat-messages"></div>
           <div class="input-box">
-            <input type="text" placeholder="Type your message" />
-            <button>Send</button>
+            <input type="text" placeholder="Type your message" id="message-input" />
+            <button id="send-button">Send</button>
           </div>
         </div>
       </main>
     </div>
+
+    <!-- Include this JavaScript at the bottom of your HTML file, just before the closing </body> tag -->
+    <script>
+      // Function to send a message
+      function sendMessage() {
+        const messageInput = document.getElementById('message-input');
+        const messageContent = messageInput.value.trim();
+
+        if (messageContent !== '') {
+          const chatMessages = document.querySelector('.chat-messages');
+
+          // Create a new sent message element
+          const sentMessage = document.createElement('div');
+          sentMessage.classList.add('message', 'sent');
+          sentMessage.innerHTML = `<div class="message-content">${messageContent}</div>`;
+
+          // Append the sent message to the chat
+          chatMessages.appendChild(sentMessage);
+
+          // Clear the input field
+          messageInput.value = '';
+
+          // Scroll to the bottom of the chat
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+      }
+
+      // Event listener for the "Send" button
+      const sendButton = document.getElementById('send-button');
+      sendButton.addEventListener('click', sendMessage);
+
+      // Function to receive a message (for demonstration)
+      function receiveMessage(message) {
+        const chatMessages = document.querySelector('.chat-messages');
+
+        // Create a new received message element
+        const receivedMessage = document.createElement('div');
+        receivedMessage.classList.add('message', 'received');
+        receivedMessage.innerHTML = `<div class="message-content">${message}</div>`;
+
+        // Append the received message to the chat
+        chatMessages.appendChild(receivedMessage);
+
+        // Scroll to the bottom of the chat
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      // Simulate receiving a message (you can replace this with actual data)
+      setTimeout(() => {
+        receiveMessage("Hello! How can I assist you?");
+      }, 2000);
+    </script>
   </body>
 </html>

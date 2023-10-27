@@ -18,9 +18,38 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../ITPJA Project/resources/styles" />
     <link rel="stylesheet" href="nurse-dashboard.css" />
     <title>Nurse Dashboard</title>
+    <style>
+      main {
+        background-color: #fffbe9;
+      }
+      .logo{
+        background-color: #798A70;
+      }
+      .profile__container{
+        background-color: #798A70;
+      }
+      .greetings{
+        background-color: #798A70;
+      }
+      .user-name{
+        background-color: #798A70;
+      }
+      .side-nav {
+        background-color: #798A70;
+      }
+      .nav-list{
+        background-color: #798A70;
+      }
+      .nav-link a{
+        background-color: #798A70;
+      }
+      .link__bottom{
+        background-color: #798A70;
+      }
+    </style>
   </head>
   <body>
     <div class="wrap">
@@ -43,13 +72,13 @@
         <nav class="main-nav">
           <ul class="nav-list">
             <li class="nav-link">
-              <a href="#"
+              <a href="nurse-dashboard.html"
                 ><i class="fa-solid fa-gauge" style="color: #ffffff"></i>
                 Dashboard</a
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="schedule.html"
                 ><i
                   class="fa-solid fa-calendar-days"
                   style="color: #ffffff"
@@ -58,13 +87,13 @@
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="personal-details.html"
                 ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
                 Information</a
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="messages.html"
                 ><i class="fa-solid fa-message" style="color: #ffffff"></i>
                 Messages</a
               >
@@ -120,9 +149,9 @@
           </div>
         </section>
 
-        <!-- Upcoming events section: Improve it and style it using the nurse-dashboard.css  -->
+        Upcoming events section: Improve it and style it using the nurse-dashboard.css 
 
-        <!-- <section class="upcoming__events card">
+         <section class="upcoming__events card">
           <h2 class="section__title">Upcoming Events</h2>
           <div class="events">
             <div class="event">
@@ -156,16 +185,38 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section> 
 
         <!-- End of Upcoming events section -->
 
 
         <!-- Add a to-do or task list -->
-
+        <section class="task-list card">
+          <h2 class="section__title">To-Do List</h2>
+          <ul class="task-items">
+              <li class="task-item">Task 1</li>
+              <li class="task-item">Task 2</li>
+              <li class="task-item">Task 3</li>
+          </ul>
+        </section>
 
         <!-- Add a messages widget -->
-
+        <section class="messages-widget card">
+          <h2 class="section__title">Messages</h2>
+          <div class="message-container">
+              <!-- Messages go here -->
+              <div class="message sent">
+                  <div class="message-content">This is a sent message.</div>
+              </div>
+              <div class="message received">
+                  <div class="message-content">This is a received message.</div>
+              </div>
+          </div>
+          <div class="input-box">
+              <input type="text" placeholder="Type your message..." />
+              <button>Send</button>
+          </div>
+        </section>
       </main>
     </div>
     <script
