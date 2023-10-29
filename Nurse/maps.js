@@ -2,6 +2,9 @@
 
 // Load the Google Maps API
 
+// Get the Google Maps API Key from PHP
+const googleMapsApiKey = "<?php echo $googleMapsApiKey; ?>";
+
 // Get oauthtoken
 
 function initMap() {

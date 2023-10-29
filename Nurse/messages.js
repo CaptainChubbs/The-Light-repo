@@ -30,3 +30,33 @@ chat.spaces.list(
 
 const accessToken = '<?php echo $_SESSION["access_token"]; ?>';
 
+// Function to send a message to Google Chat
+function sendMessage(message) {
+  // Construct the API request to send a message using the accessToken
+  // Replace 'YOUR_API_ENDPOINT' with the actual Google Chat API endpoint
+  const apiEndpoint = 'YOUR_API_ENDPOINT';
+  const chatMessage = {
+      text: message,
+  };
+
+  // Make an API request to send the message
+  fetch(apiEndpoint, {
+      method: 'POST',
+      headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(chatMessage),
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Message sent:', data);
+  })
+  .catch(error => {
+      console.error('Error sending message:', error);
+  });
+}
+
+// Example: Send a message
+sendMessage('Hello, this is a test message.');
+

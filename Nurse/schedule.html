@@ -16,8 +16,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="nurse-dashboard.css" />
+    <link rel="stylesheet" href="fullcalendar.css" />
+    <!-- <script src="jquery.min.js"></script> -->
+    <!-- <script src="fullcalendar.js"></script> -->
+    <!-- <script src="moment.js"></script> -->
     <title>Nurse Dashboard</title>
     <style>
       main {
@@ -46,6 +61,20 @@
       }
       .link__bottom{
         background-color: #798A70;
+      }
+      #calendar {
+        width: 100vh;
+        background-color: #fff; /* Set the background color */
+        border-radius: 10px; /* Add some border radius for a rounded appearance */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+        padding: 20px; /* Add some padding for spacing */
+      }
+
+      /* Style the event details within FullCalendar */
+      .fc-event {
+        background-color: #007bff; /* Set the background color of events */
+        color: #fff; /* Set the text color of events */
+        border: 1px solid #0056b3; /* Add a border to events */
       }
     </style>
   </head>
@@ -175,6 +204,35 @@
           <h3>Calendar</h3>
           <div id="calendar">
             <!-- Display your scheduled events on the calendar (you can use a library like FullCalendar.js) -->
+            <script>
+              // Prepare the event data (replace this with your actual event data)
+              const eventData = [
+                {
+                  title: 'Event 1',
+                  start: '2023-10-10T14:00:00',
+                  end: '2023-10-10T16:00:00',
+                },
+                {
+                  title: 'Event 2',
+                  start: '2023-10-15T15:00:00',
+                  end: '2023-10-15T17:00:00',
+                },
+                // Add more event objects as needed
+              ];
+
+              // Initialize FullCalendar
+              document.addEventListener('DOMContentLoaded', function () {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                  initialView: 'dayGridMonth', // Display the calendar in month view
+                  events: eventData, // Use the prepared event data
+                  eventColor: '#007bff', // Set the background color of events
+                  eventTextColor: '#fff', // Set the text color of events
+                  eventBorderColor: '#0056b3', // Set the border color of events
+                });
+                calendar.render();
+              });
+            </script>
           </div>
         </div>
       </main>
@@ -184,6 +242,11 @@
     <script src="maps.js">
       // Your JavaScript code for the widgets goes here
     </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjlWl9AFidUCGehPK7GLMTtLIfGMFtva0&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>
 

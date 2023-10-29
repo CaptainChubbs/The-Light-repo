@@ -19,6 +19,35 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="nurse-dashboard.css" />
     <title>Nurse Dashboard</title>
+    <style>
+      main {
+        background-color: #fffbe9;
+      }
+      .logo{
+        background-color: #798A70;
+      }
+      .profile__container{
+        background-color: #798A70;
+      }
+      .greetings{
+        background-color: #798A70;
+      }
+      .user-name{
+        background-color: #798A70;
+      }
+      .side-nav {
+        background-color: #798A70;
+      }
+      .nav-list{
+        background-color: #798A70;
+      }
+      .nav-link a{
+        background-color: #798A70;
+      }
+      .link__bottom{
+        background-color: #798A70;
+      }
+    </style>
   </head>
   <body>
     <div class="wrap">
@@ -42,13 +71,13 @@
         <nav class="main-nav">
           <ul class="nav-list">
             <li class="nav-link">
-              <a href="#"
+              <a href="nurse-dashboard.html"
                 ><i class="fa-solid fa-gauge" style="color: #ffffff"></i>
                 Dashboard</a
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="schedule.html"
                 ><i
                   class="fa-solid fa-calendar-days"
                   style="color: #ffffff"
@@ -57,13 +86,13 @@
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="personal-details.html"
                 ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
                 Information</a
               >
             </li>
             <li class="nav-link">
-              <a href="#"
+              <a href="messages.html"
                 ><i class="fa-solid fa-message" style="color: #ffffff"></i>
                 Messages</a
               >
@@ -234,7 +263,7 @@
             </div>
           </div>
         </div>
-        <div class="edit-data__container">
+        <div class="edit-data__container" id="edit-data-container" style="display: none;">
           <!--Nurse Portal Login Page Begins-->
           <section id="nurse-login">
             <div class="" style="padding: 50px 0">
@@ -643,8 +672,46 @@
             </div>
           </section>
         </div>
-        <!-- Add fuctionality to only allow edit once the edit button has been clicked -->
       </main>
     </div>
+
+    <!-- Add fuctionality to only allow edit once the edit button has been clicked -->
+    <script>
+      // Get references to the profile information and edit form elements
+      const profileInfo = document.querySelector('.profile-box__container');
+      const editForm = document.querySelector('#edit-data-container');
+      const saveButton = document.querySelector('#save-form');
+      const cancelButton = document.querySelector('#cancel-form');
+
+      // Get the "Edit" button
+      const editButton = document.querySelector('.edit-btn');
+
+      // Add a click event listener to the "Edit" button
+      editButton.addEventListener('click', function () {
+        // Hide the profile information
+        profileInfo.style.display = 'none';
+
+        // Show the edit form
+        editForm.style.display = 'block';
+      });
+
+      // Add a click event listener to the "Edit" button
+      editButton.addEventListener('click', function () {
+        // Hide the profile information
+        profileInfo.style.display = 'none';
+
+        // Show the edit form
+        editForm.style.display = 'block';
+      });
+
+      // Add a click event listener to the "Save" button (form submission)
+      saveButton.addEventListener('click', function (event) {
+        // Here, you can add code to handle form submission and saving data
+        // You can also validate form data before submitting
+
+        // If you want to prevent the form from submitting, use the following line:
+        // event.preventDefault();
+      });
+    </script>
   </body>
 </html>
