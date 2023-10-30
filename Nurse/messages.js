@@ -6,8 +6,9 @@ const { google } = require("googleapis");
 
 const chat = google.chat({
   version: "v1",
-  auth: "YOUR_AUTHORIZATION_HERE",
+  auth: accessToken,
 });
+
 
 // Example request
 chat.spaces.list(
@@ -32,29 +33,23 @@ const accessToken = '<?php echo $_SESSION["access_token"]; ?>';
 
 // Function to send a message to Google Chat
 function sendMessage(message) {
-  // Construct the API request to send a message using the accessToken
   // Replace 'YOUR_API_ENDPOINT' with the actual Google Chat API endpoint
   const apiEndpoint = 'YOUR_API_ENDPOINT';
   const chatMessage = {
-      text: message,
+    text: message,
   };
 
   // Make an API request to send the message
-  fetch(apiEndpoint, {
-      method: 'POST',
-      headers: {
-          'Authorization': `Bearer ${accessToken}`,
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(chatMessage),
+  chat.spaces.messages.create({
+    parent: 'spaces/your-space-id', // Replace 'your-space-id' with the actual space ID
+    requestBody: chatMessage,
   })
-  .then(response => response.json())
-  .then(data => {
-      console.log('Message sent:', data);
-  })
-  .catch(error => {
+    .then(response => {
+      console.log('Message sent:', response.data);
+    })
+    .catch(error => {
       console.error('Error sending message:', error);
-  });
+    });
 }
 
 // Example: Send a message

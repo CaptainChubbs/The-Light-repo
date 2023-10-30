@@ -16,8 +16,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
-    <script>
+    <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script> -->
+    <!-- <script>
 
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
@@ -26,7 +26,7 @@
         });
         calendar.render();
       });
-    </script>
+    </script> -->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="nurse-dashboard.css" />
     <link rel="stylesheet" href="fullcalendar.css" />
@@ -62,20 +62,20 @@
       .link__bottom{
         background-color: #798A70;
       }
-      #calendar {
+      /* #calendar { 
         width: 100vh;
-        background-color: #fff; /* Set the background color */
-        border-radius: 10px; /* Add some border radius for a rounded appearance */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
-        padding: 20px; /* Add some padding for spacing */
+        background-color: #fff; /* Set the background color 
+        border-radius: 10px; /* Add some border radius for a rounded appearance 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow 
+        padding: 20px; /* Add some padding for spacing 
       }
 
-      /* Style the event details within FullCalendar */
+      /* Style the event details within FullCalendar 
       .fc-event {
-        background-color: #007bff; /* Set the background color of events */
-        color: #fff; /* Set the text color of events */
-        border: 1px solid #0056b3; /* Add a border to events */
-      }
+        background-color: #007bff; /* Set the background color of events 
+        color: #fff; /* Set the text color of events 
+        border: 1px solid #0056b3; /* Add a border to events 
+      } */
     </style>
   </head>
   <body>
@@ -163,7 +163,7 @@
               <p>Date: October 10, 2023</p>
               <p>Time: 2:00 PM - 4:00 PM</p>
             </div>
-            <div class="event-location">
+            <div class="event-location" id="map" style="height: 400px;">
               <!-- Display the map location here (e.g., using Google Maps) -->
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.6337284982434!2d-34.397!3d150.644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDAwJzA3LjYiTiAxMDLCsDU2JzI2LjMiRQ!5e1!3m2!1sen!2sus!4vYourMapID!&output=embed"
@@ -183,7 +183,7 @@
               <p>Date: October 15, 2023</p>
               <p>Time: 3:00 PM - 5:00 PM</p>
             </div>
-            <div class="event-location">
+            <div class="event-location" id="map" style="height: 400px;">
               <!-- Display the map location here (e.g., using Google Maps) -->
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.6337284982434!2dYourLongitude!3dYourLatitude!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDAwJzA3LjYiTiAxMDLCsDU2JzI2LjMiRQ!5e1!3m2!1sen!2us!4vYourMapID!&output=embed"
@@ -203,8 +203,16 @@
         <div class="calendar-widget">
           <h3>Calendar</h3>
           <div id="calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?src=dev%40abahlengi.com&ctz=Africa%2FJohannesburg&mode=WEEK&showTitle=0&showNav=0&showCalendars=0&showTabs=0" 
+              style="border: 0" 
+              width="800" 
+              height="600" 
+              frameborder="0" 
+              scrolling="no"
+            ></iframe>
+
             <!-- Display your scheduled events on the calendar (you can use a library like FullCalendar.js) -->
-            <script>
+            <!-- <script> 
               // Prepare the event data (replace this with your actual event data)
               const eventData = [
                 {
@@ -232,7 +240,7 @@
                 });
                 calendar.render();
               });
-            </script>
+            </script>-->
           </div>
         </div>
       </main>

@@ -32,15 +32,15 @@ function initMap() {
       const eventLocation = event.location;
       const eventTitle = event.summary;
 
-      // Create a marker for each event on the map
-      const marker = new google.maps.Marker({
+      // Loop through event locations and add markers
+      eventLocations.forEach((eventLocation) => {
+        const marker = new google.maps.Marker({
         position: { lat: eventLocation.lat, lng: eventLocation.lng },
         map: map,
-        title: eventTitle,
+        title: eventLocation.title,
       });
 
       // You can customize the marker's appearance or add event info windows as needed
     });
   });
-}
-
+})}
