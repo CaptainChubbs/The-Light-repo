@@ -1,5 +1,4 @@
 <?php 
-  require_once './vendor/autoload.php';
 
   require_once './functions/config_session.inc.php';
   require_once './functions/login_view.inc.php';
@@ -54,7 +53,7 @@
 
             <?php
 //Autoload Classes for autoloading classes in other files without having to include them manually
-require_once 'vendor/autoload.php';
+include __DIR__.'/../vendor/autoload.php';
 require_once "./functions/config_login.php";
 
 // Get login url 

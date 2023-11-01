@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+include __DIR__.'/../vendor/autoload.php';
 
 // Replace with your own JSON file
 $clientSecretFile = 'path/to/your/client_secret.json';
