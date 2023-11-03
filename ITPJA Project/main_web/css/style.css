@@ -1,0 +1,169 @@
+:root{
+
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132,139,200,0.18);
+    --color-primary-variant:#111e88;
+    --color-dark-variant: #677483;
+
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    font-size: 18px;
+    --bg-color: #FFFBE9 !important;
+    --color-green: #798A70 !important;
+    --dark-bg: #F4EAD5 !important;
+}
+body{
+    font-family: 'Tenor Sans', sans-serif !important;
+    font-size: 14px;
+    background-color: var(--bg-color) !important;
+
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Bellefair', serif !important;
+    color: var(--color-green) !important;
+
+}
+body nav div a{
+    background-color: none !important;
+    color: var(--color-green) !important;
+}
+body .home-div nav div a{
+    background-color: none !important;
+    color: var(--bg-color) !important;
+}
+nav div a:hover{
+    color: #000 !important;
+}
+
+.btn-green {
+    background-color: var(--color-green) !important;
+    color: var(--bg-color) !important;
+    border: none !important;
+    border-radius: 35px !important;
+    padding: 10px !important;
+    margin: 10px !important;
+
+}
+.btn-green:hover {
+    background-color: var(--dark-bg) !important;
+    color: var(--color-green) !important;
+    border: none !important;
+    border-radius: 35px;
+    padding: 10px;
+    margin: 10px;
+
+}
+/* Dropdown menu background color*/
+
+body .home-div .navbar-nav > li > .dropdown-menu {     
+    background-color: var(--color-green);  
+}
+
+/* Dropdown menu font color*/ 
+
+body .home-div .navbar-nav > li > .dropdown-menu a{
+       color: var(--bg-color);  
+    }
+body .home-div .navbar-nav > li > .dropdown-menu a:hover{
+        color: var(--color-green) !important;  
+        background-color: var(--dark-bg);
+     }
+
+body .home-div{
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('../assets/img/nurse-hand.jpeg') no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+body .home-div h2, body .home-div p{
+    color: var(--bg-color) !important;
+
+}
+body .home-div hr{
+    border: none;
+    height: 5px;
+    /* Set the hr color */
+    color: var(--bg-color);  /* old IE */
+    background-color: var(--bg-color);  /* Modern Browsers */
+}
+
+body main .cards .card{
+    background-color: var(--dark-bg) !important;
+    color: var(--color-green) !important;
+    border: none !important;
+    border-radius: 35px;
+    width: 70% !important;
+}
+body main .cards .card img{
+    border-radius: 35px;
+    width: 230px;
+    height: 250px;
+}
+body main .cards .card p{
+    color: black !important;
+}
+body #services-sect .card{
+    background-color: var(--dark-bg) !important;
+    color: var(--color-green) !important;
+    border: none !important;
+    border-radius: 35px;
+}
+body #services-sect .card img{
+    border-radius: 35px;
+    width: 230px;
+    height: 230px;
+}
+body main #contact-sect a{
+    text-decoration: none !important;
+    color: var(--color-green) !important;
+
+}
+body main #contact-sect a i{
+    text-decoration: none !important;
+    background-color: var(--color-green) !important;
+    color: var(--bg-color) !important;
+    border-radius: 35px;
+    padding: 10px;
+    margin: 10px;
+}
+body main #contact-sect a i:hover{
+    background-color: var(--dark-bg) !important;
+    color: var(--color-green) !important;
+}
+
+
+footer .footer-div{
+    background-color: var(--color-green) !important;
+    color: var(--bg-color) !important;
+}
+footer .footer-div a{
+    color: var(--bg-color) !important;
+}
+footer .footer-div ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer .footer-div a:hover{
+    color: var(--bg-color) !important;
+}
+footer .footer-div h4{
+    background-color: var(--color-green) !important;
+    color: var(--bg-color) !important;
+}
