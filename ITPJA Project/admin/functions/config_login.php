@@ -1,6 +1,6 @@
 <?php
 // Path: functions/config_login.php
-include __DIR__.'/../vendor/autoload.php';
+include __DIR__.'/../../vendor/autoload.php';
 
 // Google API configuration
 define('GOOGLE_CLIENT_ID', '1053196319965-irhs4pprplgm8uk9nrunj3esqmlvsmpt.apps.googleusercontent.com');
