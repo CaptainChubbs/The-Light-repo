@@ -11,6 +11,41 @@
 <?php
     include_once("includes/head.php");
     include_once("includes/nav.php");
+
+    if (isset($_SESSION['user_authenticated']) && $_SESSION['user_authenticated']) {
+        // User is logged in.
+    
+        if (isset($_POST['checkout'])) {
+            // Get the selected services from the user's cart session.
+            if (isset($_SESSION['user_cart']) && is_array($_SESSION['user_cart'])) {
+                require_once("db_connection.php"); // Include your database connection file.
+    
+                // Initialize the total price for the order.
+                $totalPrice = 0;
+    
+                foreach ($_SESSION['user_cart'] as $item) {
+                    $service_name = $item['name'];
+                    $service_rate = $item['rate'];
+                    $totalPrice += $service_rate;
+    
+                    // Insert the order details into the "orders" table.
+                    $customer_id = $_SESSION['user_id']; // Retrieve the user's ID from the session.
+                    $customer_name = $_SESSION['user_first_name'] . ' ' . $_SESSION['user_last_name'];
+                    $payment_status = "Paid"; // You can modify this based on your payment process.
+                    $order_status = "Completed"; // You can adjust the order status.
+    
+                    $date_ordered = date("Y-m-d"); // Get the current date.
+    
+                    // Insert the order into the database.
+                    $insert_query = "INSERT INTO orders (service_name, payment_status, order_status, customer_name, customer_id, date_ordered) VALUES ('$service_name', '$payment_status', '$order_status', '$customer_name', $customer_id, '$date_ordered')";
+                    mysqli_query($conn, $insert_query);
+                }
+    
+                // Clear the user's cart after the order is placed.
+                unset($_SESSION['user_cart']);
+            }
+        }
+    }
 ?>
 
 <body>
