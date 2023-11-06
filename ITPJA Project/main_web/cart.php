@@ -6,12 +6,12 @@ if (isset($_GET['action']) && $_GET['action'] == 'add') {
         $service_id = $_GET['id'];
 
         // Retrieve service details from your database based on $service_id
-        require_once("db_connection.php"); // Include your database connection file.
-        $query = "SELECT * FROM services WHERE service_id = $service_id";
-        $result = mysqli_query($conn, $query);
+        require_once("connect.php"); // Include your database connection file.
+        $select_query = "SELECT * FROM services WHERE service_id = $service_id";
+        $results_query = mysqli_query($conn, $select_query);
 
-        if ($result && mysqli_num_rows($result) == 1) {
-            $row = mysqli_fetch_assoc($result);
+        if ($results_query && mysqli_num_rows($results_query) == 1) {
+            $row = mysqli_fetch_assoc($results_query);
 
             $service_name = $row['service_name'];
             $service_rate = $row['service_rate'];

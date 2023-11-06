@@ -3,23 +3,24 @@ session_start(); // Start the session.
 
 if (isset($_POST['login'])) {
     include __DIR__.'/./includes/connect.php'; // Include your database connection file.
+    include __DIR__.'/./main_web/cart.php';
 
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     // Perform database query to check if the email and password match.
-    $query = "SELECT * FROM customers WHERE email = '$email' AND password = '$password'";
-    $result = mysqli_query($conn, $query);
-    if ($result && mysqli_num_rows($result) == 1) {
+    $select_query = "SELECT * FROM customers WHERE email = '$email' AND password = '$password'";
+    $results_query = mysqli_query($conn, $select_query);
+    if ($results_query && mysqli_num_rows($results_query) == 1) {
         // User is authenticated. Set session variables.
-        $row = mysqli_fetch_assoc($result);
+        $row = mysqli_fetch_assoc($results_query);
         $_SESSION['user_authenticated'] = true;
         $_SESSION['user_id'] = $row['customer_id'];
         $_SESSION['user_first_name'] = $row['first_name'];
         $_SESSION['user_last_name'] = $row['last_name'];
 
         // Redirect to the home page or a dashboard.
-        header("Location: home.php");
+        header("Location: client-portal.php");
     } else {
         // Authentication failed. Display an error message.
         $login_error = "Invalid email or password. Please try again.";

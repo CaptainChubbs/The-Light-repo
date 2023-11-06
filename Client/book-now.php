@@ -1,3 +1,57 @@
+<?php
+// session_start();
+// include __DIR__.'/./includes/connect.php'; // Include your database connection file.
+
+    if(isset($_GET['add-to-cart'])){
+        $select_query = "SELECT * FROM `services` ORDER BY service_name";
+        $results_query = mysqli_query($conn, $select_query);
+        $count = 1;
+
+        // Check if there are any services in the database.
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $service_id = $row['service_id'];
+            $service_name = $row['service_name'];
+            $service_description = $row['service_description'];
+            $service_rate = $row['service_rate'];
+            $service_img = $row['service_img'];
+
+            // Display each service as a card.
+            echo '<div class="service-card">';
+            echo '<h2>' . $service_name . '</h2>';
+            echo '<p>' . $service_description . '</p>';
+            echo '<p>Price: ' . $service_rate . '</p>';
+            // Add a button or link for "Add to Cart" with the appropriate service ID.
+            echo '<a href="head.php?add-to-cart=' . $service_id . '">Add to Cart</a>';
+            echo '</div>';
+        }
+
+    } else {
+        echo 'No services available at the moment.';
+    }
+
+    // Close the database connection when done.
+    mysqli_close($conn);
+
+    $service_id = $_GET['add-to-cart'];
+    // Fetch service details based on $service_id from the "services" table.
+    if (!isset($_SESSION['user_cart'])) {
+        $_SESSION['user_cart'] = array();
+    }
+
+    // Create a cart item and add it to the user's session cart.
+    $cart_item = array(
+        'id' => $service_id,
+        'name' => $service_name,
+        'rate' => $service_rate
+    );
+
+    $_SESSION['user_cart'][] = $cart_item;
+
+    // Redirect back to the book-now page or any other page as needed.
+    header("Location: book-now.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,25 +61,49 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .pricing-table {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .table-heading {
-            color: #3e474d;
-        }
-        .table-subheading {
-            color: #6c757d;
-        }
-        .table th, .table td {
-            border: none;
-        }
-        .table th {
-            background-color: #f5f5f5;
-        }
+        /* Style for the service cards */
+    .service-card {
+        background-color: #f5f5f5;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card h2 {
+        font-size: 20px;
+        color: #333;
+    }
+
+    .service-card p {
+        color: #777;
+        margin: 10px 0;
+    }
+
+    .service-card a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .service-card a:hover {
+        background-color: #0056b3;
+    }
+
+    /* Style for the available services section */
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Additional styling for your form elements can be added here */
     </style>
 </head>
 
@@ -39,134 +117,7 @@
             <h2 class="mb-4 text-center">Welcome to Our Nurse Booking Services</h2>
 
             <!-- Health Assessments Table -->
-            <div class="pricing-table">
-                <h3 class="text-center table-heading">Comprehensive Health Assessments</h3>
-                <p class="text-center table-subheading">Caring for your well-being.</p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Health risk assessment for 25 or more people (HRA)</td>
-                            <td>R150</td>
-                            <td>
-                            <a href="#" class="add-to-cart" data-service="HRA" data-price="150">Add to Cart</a>
-                        </td>
-                        </tr>
-                        <tr>
-                            <td>Hematocrit Tests (HCT)</td>
-                            <td>R250</td>
-                            <td><a href="#">Add to Cart</a></td>
-                        </tr>
-                        <tr>
-                            <td>HRA & HCT</td>
-                            <td>R350</td>
-                            <td><a href="#">Add to Cart</a></td>
-                        </tr>
-                        <!-- Add more rows if needed -->
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Health Education and Coordination Fees Table -->
-            <div class="pricing-table">
-                <h3 class="table-heading">Health Education and Coordination Fees</h3>
-                <p class="table-subheading">Supporting your health journey.</p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Less than 100 attendees</td>
-                            <td>R1500</td>
-                            <td><a href="cart.php?service=Less_than_100_attendees&price=1500">Add to Cart</a></td>
-                        </tr>
-                        <tr>
-                            <td>More than 100 attendees</td>
-                            <td>R2500</td>
-                            <td><a href="cart.php?service=More_than_100_attendees&price=2500">Add to Cart</a></td>
-                        </tr>
-                        <tr>
-                            <td>Travelling is only billed for more than 200km event booked within 10 days of the event taking place.</td>
-                            <td>R2500</td>
-                            <td><a href="cart.php?service=Travelling_fee&price=2500">Add to Cart</a></td>
-                        </tr>
-                        <!-- Add more rows if needed -->
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Consultation Fees Table -->
-            <div class="pricing-table">
-                <h3 class="table-heading">Consultation Fees</h3>
-                <p class="table-subheading">Your health, our priority.</p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Individual consultation, counselling, planning and/or assessment. 15 - 30 minutes.</td>
-                            <td>R220</td>
-                            <td><a href="#">Add to Cart</a></td>
-                        </tr>
-                        <tr>
-                            <td>Individual consultation, counselling, planning and/or assessment. 31 - 45 minutes.</td>
-                            <td>R380</td>
-                            <td><a href="#">Add to Cart</a></td>
-                        </tr>
-                        <tr>
-                            <td>Virtual home assessments and care plan</td>
-                            <td>R350</td>
-                            <td><a href="#">Add to Cart</a></td>
-                        </tr>
-                        <!-- Add more rows if needed -->
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Psychiatric Nursing Therapy Table -->
-            <div class="pricing-table">
-                <h3 class="table-heading">Psychiatric Nursing Therapy</h3>
-                <p class="table-subheading">Caring for your mental well-being.</p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Individual Therapy Session</td>
-                            <td>R120</td>
-                            <td><a href="#">Add to Cart</a></td>
-                        </tr>
-                        <tr>
-                            <td>Group Therapy Session</td>
-                            <td>R75</td>
-                            <td><a href="#">Add to Cart</a></td>
-                        </tr>
-                        <!-- Add more rows if needed -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+            
 
     <!-- Booking form begins -->
     <form id="booking-form" action="process_booking.php" method="post">
@@ -182,22 +133,32 @@
                 <div class="col-md-6 offset-md-3">
                     <h2>Booking Details</h2>
                     <!-- Booking Form Fields -->
-                    <div class="form-group">
-                        <label for="service">Select Service(s)</label>
-                        <select class="form-control" id="service" name="service[]" multiple required>
-                            <option value="HRA" data-price="150">Health risk assessment for 25 or more people (HRA)</option>
-                            <option value="HCT" data-price="250">Hematocrit Tests (HCT)</option>
-                            <option value="HRA_HCT" data-price="350">HRA & HCT</option>
-                            <option value="Less_than_100_attendees" data-price="1500">Less than 100 attendees</option>
-                            <option value="More_than_100_attendees" data-price="2500">More than 100 attendees</option>
-                            <option value="Travelling_fee" data-price="2500">Travelling is only billed for more than 200km event</option>
-                            <option value="Individual_Consultation_15-30_min" data-price="220">Individual consultation, counselling, planning and/or assessment. 15 - 30 minutes</option>
-                            <option value="Individual_Consultation_31-45_min" data-price="380">Individual consultation, counselling, planning and/or assessment. 31 - 45 minutes</option>
-                            <option value="Virtual_home_assessment" data-price="350">Virtual home assessments and care plan</option>
-                            <option value="Individual_Therapy_Session" data-price="120">Individual Therapy Session</option>
-                            <option value="Group_Therapy_Session" data-price="75">Group Therapy Session</option>
-                            <!-- Add more service options here -->
-                        </select>
+                    <!-- Shopping Cart -->
+                    <div class="container mt-5">
+                        <h2>Shopping Cart</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Service Name</th>
+                                    <th>Rate</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            if (isset($_GET['add-to-cart'])) {
+                                $service_id = $_GET['add-to-cart'];
+                                // Fetch service details based on $service_id from the "services" table.
+
+                                // Call a function from your cart file to add the service to the cart
+                                addServiceToCart($service_id, $service_name, $service_rate);
+
+                                // Redirect back to the book-now page or any other page as needed.
+                                header("Location: book-now.php");
+                            }
+                            ?>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="form-group">
                         <label for="quantity">Quantity</label>
@@ -231,6 +192,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
         const serviceSelect = document.getElementById("service");
