@@ -27,10 +27,10 @@
                     <a href="tel: +27715667236"><i class="fa-solid fa-phone"></i> +27 71 566 7236</a><br>
                     <a href="https://www.google.com/maps/place/WeWork+-+Coworking+%26+Office+Space/@-26.1458466,28.0412706,17z/data=!3m1!4b1!4m6!3m5!1s0x1e950dcd57eac3bf:0x2c4556de75b244a5!8m2!3d-26.1458514!4d28.0438455!16s%2Fg%2F11fk4sjcy4?entry=ttu"><i class="fa-sharp fa-solid fa-location-pin"></i>1F, 173 Oxford Rd, Rosebank, Johannesburg, 2196</a>
                     <p class="pt-4">Find Us on Social Media:</p>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="www.twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
 
 
                     
