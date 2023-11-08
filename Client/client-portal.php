@@ -37,27 +37,27 @@
                         <form id="user-info-form" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                             <div class="form-group">
                                 <label for="username">Name:</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter username" readonly>
+                                <input type="text" class="form-control" id="name" placeholder="Enter Name" value="<?php echo $firstName; ?>" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="username">Surname:</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter username" readonly>
+                                <input type="text" class="form-control" id="surname" placeholder="Enter Surname" value="<?php echo $lastName; ?>" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="username">Age:</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter username" readonly>
+                                <input type="text" class="form-control" id="age" placeholder="Enter Age" value="<?php echo  $age; ?>" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" readonly>
+                                <input type="email" class="form-control" id="email" placeholder="Enter Email" value="<?php echo $email; ?>" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="username">Phone number:</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter username" readonly>
+                                <input type="text" class="form-control" id="number" placeholder="Enter Phone Number" value="<?php echo $phoneNumber; ?>" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="username">Address:</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter username" readonly>
+                                <input type="text" class="form-control" id="address" placeholder="Enter Address" value="<?php echo $address; ?>" readonly>
                             </div>
                             <button type="button" class="btn btn-primary" id="edit-user-info">Edit</button>
                             <button type="submit" class="btn btn-success" id="save-user-info" disabled>Save</button>
@@ -112,14 +112,43 @@
     </section>
 
     <?php include_once("./includes/footer.php");?>
-    <!-- <footer class="bg-light text-center py-3">
-        <div class="container">
-            <p class="mb-0">&copy; 2023 Nurse Procurement Service. All rights reserved.</p>
-            <p class="mb-0"><strong>Get in touch</strong></p>
-            <p class="mb-0">Interested in our services</p>
-            <a href="contacts.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </footer> -->
+
+<!-- 
+    < ? php
+// Database connection parameters
+$DB_HOST = 'localhost';
+$DB_Username = 'root';
+$DB_Password = '';
+$DB_NAME = 'Abahlengi';
+
+// Create a connection to the database
+$conn = new mysqli($DB_HOST, $DB_Username , $DB_Password, $DB_NAME);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// SQL query to retrieve client information
+$sql = "SELECT * FROM clients";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Output data for client
+    while ($row = $result->fetch_assoc()) {
+        echo "";
+        echo "<input type="text" class="form-control" id="name" placeholder="Enter Name" readonly>". $row["name"] . "</td>";
+        echo "<td>" . $row["surname"] . "</td>";
+        echo "<td>" . $row["email"] . "</td>";
+        echo "</tr>";
+    }
+} else {
+    echo "Client not found in the database.";
+}
+
+// Close the database connection
+$conn->close();
+?> -->
 
 <!-- Add Bootstrap JS and jQuery scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

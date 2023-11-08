@@ -75,6 +75,26 @@ require_once 'config.php';
     <section id="nurse-login">
         <div class="container-fluid d-flex align-items-center justify-content-center" style="padding: 50px 0">
 
+        <?php
+// Initialize variables to hold values
+$firstName = '';
+$lastName = '';
+$age = '';
+$email = '';
+$phoneNumber = '';
+$address = '';
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve values from the form
+    $firstName = $_POST['first-name'];
+    $lastName = $_POST['last-name'];
+    $age = $_POST['age'];
+    $email = $_POST['email-address'];
+    $phoneNumber = $_POST['phone-number'];
+    $address = $_POST['address'];
+}
+?>
             <!--Form Begins-->
             <form action="" method="post" style="width: 40%;" class="needs-validation" role="form" data-toggle="validator" novalidate>
             <h1 class="h1 text-center"style="color: #798A70; margin: auto; padding-bottom:10px">Client Registration</h1>
