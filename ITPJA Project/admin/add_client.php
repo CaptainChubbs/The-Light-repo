@@ -1,9 +1,5 @@
 <?php 
-session_start();
-if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    header('Location: login.php');
-    exit;
-}
+require_once(__DIR__ ."/functions/check_session.php");
 $pageTitle = "Add Client";
 include_once("./head.php");?>
 
@@ -113,7 +109,8 @@ include_once("./head.php");?>
 
 </div>
 <div class="row fixed-bottom">
-    <div class="col"><?php include_once("./includes/footer.php");?>
+    <div class="col">            <?php include_once __DIR__ .'/includes/footer.php';?>
+
 </div>
         </div>
     </div>

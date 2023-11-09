@@ -1,9 +1,6 @@
 <?php 
-session_start();
-if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    header('Location: login.php');
-    exit;
-}
+require_once(__DIR__ ."/functions/check_session.php");
+
 $pageTitle = "Add Nurse";
 include_once("./head.php");?>
 
@@ -203,7 +200,7 @@ include_once("./head.php");?>
             </div>
 
 
-            <?php include_once("./includes/footer.php");?>
+            <?php include_once __DIR__ .'/includes/footer.php';?>
         </div>
     </div>
     

@@ -1,10 +1,6 @@
 <?php 
 
-session_start();
-if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    header('Location: login.php');
-    exit;
-}
+require_once(__DIR__ ."/functions/check_session.php");
 
 $pageTitle = "Manage Finance";
 include_once("./head.php");?>
@@ -107,7 +103,7 @@ include_once("./head.php");?>
             </div>
                 
             </div>
-            <?php include_once("./includes/footer.php");?>
+            <?php include_once __DIR__ .'/includes/footer.php';?>
         </div>
     </div>
     
@@ -115,32 +111,4 @@ include_once("./head.php");?>
 </body>
 </html>
 
-<?php
-// Include the QuickBooks API library
-require_once './finance/quicbooks.php';
 
-// Set up the QuickBooks API credentials
-$quickbooks_username = 'your_quickbooks_username';
-$quickbooks_password = 'your_quickbooks_password';
-$quickbooks_realm = 'your_quickbooks_realm';
-
-// Create a new instance of the QuickBooks API
-$quickbooks = new QuickBooks($quickbooks_username, $quickbooks_password, $quickbooks_realm);
-
-// Get the list of invoices from QuickBooks
-$invoices = $quickbooks->getInvoices();
-?>
-// Display the list of invoices in a table
-
-echo '<table>';
-echo '<tr><th>Invoice Number</th><th>Customer Name</th><th>Items</th><th>Amount</th> <th>Actions</th></tr>';
-foreach ($invoices as $invoice) {
-    echo '<tr>';
-    echo '<td>' . $invoice['InvoiceNumber'] . '</td>';
-    echo '<td>' . $invoice['CustomerName'] . '</td>';
-    echo '<td>' . $invoice['Items'] . '</td>';
-    echo '<td>' . $invoice['Amount'] . '</td>';
-    echo '<td></td>';
-    echo '</tr>';
-}
-echo '</table>';
