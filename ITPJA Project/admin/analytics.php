@@ -1,8 +1,7 @@
 <?php session_start();
-if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    header('Location: login.php');
-    exit;
-}?>
+require_once(__DIR__ ."/functions/check_session.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

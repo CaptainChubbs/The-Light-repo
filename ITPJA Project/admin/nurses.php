@@ -1,9 +1,6 @@
 <?php 
-session_start();
-if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    header('Location: login.php');
-    exit;
-}
+require_once(__DIR__ ."/functions/check_session.php");
+
 $pageTitle = "Nurses Dashboard";
 include_once("./head.php");?>
 
@@ -76,6 +73,7 @@ include_once("./head.php");?>
                     $result=mysqli_query($conn,$get_nurses);
 
                     while($row= mysqli_fetch_assoc($result)){
+                        $nurseID=$row['nurseID'];
                         $first_name=$row['first_name'];
                         $last_name=$row['last_name'];
                         $email=$row['email'];
@@ -114,7 +112,7 @@ include_once("./head.php");?>
                         <td><?php echo $practice_number; ?></td>
                         <td><?php echo $dispensing_number; ?></td>
                         <td><?php echo $createdAt; ?></td>
-                        <td><a href='index.php?edit_nurse=<?php echo $nurseID;?>'><i class='fa-solid fa-pen-to-square' style='color:black;'></i></a> <a href='index.php?delete_nurse=<?php echo $nurseID;?>'><i class='fa-solid fa-trash' style='color:black;'></i></a></td>
+                        <td><a href='./functions/edit_nurse.php?nurse_id=<?php echo $nurseID;?>'><i class='fa-solid fa-pen-to-square' style='color:black;'></i></a> <a href='' data-bs-toggle="modal" data-bs-target="#myModal"><i class='fa-solid fa-trash' style='color:black;'></i></a></td>
                         </tr>
                         <?php
                     }
@@ -140,10 +138,26 @@ include_once("./head.php");?>
                 </div>
 
             </form>
-
+            <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to Delete this nurse record?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a class="btn btn-primary">Confirm</a>
+                </div>
+                </div>
+            </div>
+            </div>
 
             </div>
-            <?php include_once("./includes/footer.php");?>
+            <?php include_once __DIR__ .'/includes/footer.php';?>
         </div>
     </div>
     

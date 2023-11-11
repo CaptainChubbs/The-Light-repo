@@ -1,10 +1,12 @@
-
+<?php  
+require_once __DIR__ ."/../functions/charts_calc.php";
+?>
 
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
                     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
                     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
                     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
                     <script src="./js/index.js"></script>
 
 
@@ -33,55 +35,47 @@
                     });
 
                     tinymce.init({
-                    selector: 'textarea',
-                    plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
-                    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-                    tinycomments_mode: 'embedded',
-                    tinycomments_author: 'Author name',
-                    mergetags_list: [
-                        { value: 'First.Name', title: 'First Name' },
-                        { value: 'Email', title: 'Email' },
-                    ],
-                    ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant"))
+    selector: 'textarea',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+  });
+
+
+
+                    window.onload = function() {
+                    var barChart = new CanvasJS.Chart("nurse-distribution", {
+                        animationEnabled: true,
+                        theme: "light2",
+                        title:{
+                            text: "Nurses Per Province"
+                        },
+                        axisY: {
+                            title: "Number"
+                        },
+                        data: [{
+                            type: "column",
+                            yValueFormatString: "#",
+                            dataPoints: <?php echo json_encode($nurse_data, JSON_NUMERIC_CHECK); ?>
+                        }]
                     });
+                    barChart.render();
+                    
+                    var pieChart = new CanvasJS.Chart("eventTypes", {
+                        animationEnabled: true,
+                        title: {
+                            text: "Types of Events being Booked"
+                        },
 
-
-
-                    // Bar Chart 
-                    var ctx = document.getElementById("bar-chart");
-                    var myPieChart = new Chart(ctx, {
-
-                    // The type of chart we want to create
-                    type: 'bar',
-
-                    // The data for our dataset
-                    data: {
-                        labels: ["Gauteng", "Kwazulu-Natal", "Eastern Cape", "Northern Cape", "Western Cape", "Limpopo", "Mpumalanga", "North West", "Free State"],
-                        datasets: [{
-                        label: "Nurses Per Province",
-                        data: [ <?php $Gauteng; ?> , 15.58, 11.25, 8.32 , 10.12, 9.54, 7.61, 8.32, 7.61],
-                        backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745', '#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b'],
-                        }],
-                    },
+                        data: [{
+                            type: "pie",
+                            yValueFormatString: "#,##0.00\"%\"",
+                            indexLabel: "{label} ({y})",
+                            dataPoints: <?php echo json_encode($events_data, JSON_NUMERIC_CHECK); ?>
+                        }]
                     });
+                    pieChart.render();
 
-                    // Pie Chart Example
-                    var ctx = document.getElementById("pie-chart");
-                    var myPieChart = new Chart(ctx, {
-                    //The type of chart to create. In this case, a pie chart.
-                    type: 'pie',
-
-                    //The data for the nurse dataset
-                    data: {
-                        labels: ["Wellness", "At-Home Care", "Wound Care", "Elderly Care"],
-                        datasets: [{
-                        data: [12.21, 15.58, 11.25, 8.32],
-                        backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
-                        }],
-                    },
-                    });
-
-
+                    }
 
 
 

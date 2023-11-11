@@ -82,6 +82,11 @@ img{
     width: 100%;
 }
 
+div .navigation #submenu1, #submenu2{
+    background: var(--color-dark) !important;
+}
+
+
 h1, h2, h3, h4{
     color: var(--canva-green) !important;
 }
@@ -125,6 +130,8 @@ small{
     background: var(--color-success);
     color: var(--color-white);
 }
+
+
 
 .text-muted{
     color: var(--color-info-dark);
@@ -250,6 +257,7 @@ aside .sidebar a.active i{
     color: white;
     border-radius: var(--border-radius-1);
 }
+
 
 
 .submit-login input[type=submit]{

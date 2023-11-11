@@ -1,9 +1,6 @@
 <?php 
-session_start();
-if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    header('Location: login.php');
-    exit;
-}
+require_once(__DIR__ ."/functions/check_session.php");
+
 $pageTitle = "Customer Data";
 include_once("./head.php");?>
 
@@ -64,9 +61,7 @@ include_once("./head.php");?>
 
                 $get_customers = "SELECT * FROM `customers` ORDER BY customer_id ASC";
                 $result=mysqli_query($conn,$get_customers);
-                if (mysqli_num_rows($result)==0){
-                    echo "<tr><td colspan='9' class='no-records'>No records found</td></tr>";
-                }else{
+
                 while($row= mysqli_fetch_assoc($result)){
                     $customer_id=$row['customer_id'];
                     $name=$row['first_name'];
@@ -100,7 +95,7 @@ include_once("./head.php");?>
                     </tr>
                     <?php
                 }
-                }
+                
 
                 ?>
 
@@ -121,7 +116,7 @@ include_once("./head.php");?>
             </form>
 
             </div>
-            <?php include_once("./includes/footer.php");?>
+            <?php include_once __DIR__ .'/includes/footer.php';?>
 
         </div>
         

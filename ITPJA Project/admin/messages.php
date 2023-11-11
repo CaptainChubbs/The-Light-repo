@@ -1,11 +1,11 @@
 <?php 
-session_start();
-if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    header('Location: login.php');
-    exit;
-}
+require_once(__DIR__ ."/functions/check_session.php");
+
+
 $pageTitle = "Messages";
-include_once("./head.php");?>
+include_once("./head.php");
+require_once("./functions/Gmail-api.php");?>
+
 
 
 <body>
@@ -35,8 +35,7 @@ include_once("./head.php");?>
         <th class="all">Select</th>
         <th class="all">Sender</th>
         <th class="all">Subject</th>
-        <th class="all">Message</th>
-        <th class="all">Date Received</th>
+        <th class="all">Date</th>
         <th class="all">Actions</th>
     </tr>
     </thead>
@@ -45,8 +44,7 @@ include_once("./head.php");?>
         <th class="all">Select</th>
         <th class="all">Sender</th>
         <th class="all">Subject</th>
-        <th class="all">Message</th>
-        <th class="all">Date Received</th>
+        <th class="all">Date</th>
         <th class="all">Actions</th>
     </tr>
     </tfoot>
@@ -54,30 +52,46 @@ include_once("./head.php");?>
     <?php
 
 
-    $get_nurses = "SELECT * FROM `nurse` ORDER BY first_name ASC";
-    $result=mysqli_query($conn,$get_nurses);
+// Display the emails on the screen
 
-    while($row= mysqli_fetch_assoc($result)){
-        $first_name=$row['first_name'];
-        $last_name=$row['last_name'];
-        $email=$row['email'];
-        $phone_number=$row['phone_number'];
-        $createdAt=$row['createdAt'];
-        ?>
-        <tr>
-        <form action="">
-        <td><input type="checkbox" name="select" id=""></td>
-        <td><?php echo $first_name; ?></td>
-        <td><?php echo $last_name;?></td>
-        <td><?php echo $email; ?></td>
-        <td><a href="mailto: <?php echo $email ?>"><?php echo $email; ?></a></td>
-        <td><a href="view_invoice.php?id=' . $invoice['Id'] . '">View</a></td>
-        </tr>
-        <?php
+
+
+foreach ($messages as $message) {
+    $msg = $service->users_messages->get($user, $message->getId());
+    $m_id = $msg->getId();
+    $payload = $msg->getPayload();
+    $headers = $payload->getHeaders();
+    $subject = '';
+    $from = '';
+    foreach ($headers as $header) {
+        if ($header->getName() == 'Subject') {
+            $subject = $header->getValue();
+        }
+        if ($header->getName() == 'From') {
+            $from = $header->getValue();
+        }
+        if ($header->getName() == 'Date') {
+            $date = $header->getValue();
     }
-    
-
+}
     ?>
+    <tr>
+    <form action="">
+    <td><input type="checkbox" name="select" id=""></td>
+    <td><a href="./view_mail.php?id=<?php echo $m_id; ?>&user=<?php echo $user;?>"><?php echo $from; ?></a> </td>
+    <td><a href=""><?php echo $subject;?></a> </td>
+    <td><a href=""><?php echo $date;?></a> </td>
+    <td><a href="mailto:>"><?php echo "test"; ?></a> <a href="view_invoice.php?id=' . $invoice['Id'] . '">View</a></td>
+    </tr>
+<?php
+
+}
+?>
+
+
+
+
+
 
 </tbody>       
 </table>
@@ -100,7 +114,7 @@ include_once("./head.php");?>
             </div>
                 
             </div>
-            <?php include_once("./includes/footer.php");?>
+            <?php include_once __DIR__ .'/includes/footer.php';?>
         </div>
     </div>
     
