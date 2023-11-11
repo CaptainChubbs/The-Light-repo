@@ -285,11 +285,43 @@ if(isset($_POST['insert'])){
         $results_query = mysqli_query($conn,$nurse_insert);
 
         if($results_query){
-            echo "<script>alert('Successfully Added')</script>";
-            echo "<script>window.open('./nurses.php','_self')</script>";
-        }
+            // Nurse added successfully, now send an email with credentials
+            // require 'vendor/autoload.php'; 
 
+            $mail = new PHPMailer(true);
+
+            try {
+                //Server settings
+                $mail->SMTPDebug = 0;                      //Enable verbose debug output
+                $mail->isSMTP();                                            //Send using SMTP
+                $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                $mail->Username   = 'info@abahlengi.com';                     //SMTP username
+                $mail->Password   = 'ytun gesa huog ygxy';                               //SMTP password zcyb fqyw yitn ztzk
+                $mail->SMTPSecure = 'tls';         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+                $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+
+                $mail->From = "info@abahlengi.com";
+                $mail->FromName = "Asanda Ngocobo";
+
+               // Recipient
+                $mail->addAddress($email, $userName); // $userEmail and $userName from your registration form
+
+                // Content
+                $mail->isHTML(true);
+                $mail->Subject = 'Account Created';
+                $mail->Body    = "Dear user,<br><br>Your account has been created with the following credentials:<br><br>Email Address: $email<br>Password: $password<br><br>If you feel this is incorrect, please contact the admin.";
+
+                $mail->send();
+                echo "<script>alert('Email has been sent.');</script>";
+                echo "<script>window.open('./nurses.php','_self')</script>";
+            } catch (Exception $e) {
+                echo "<script>alert('Email could not be sent. Mailer Error: {$mail->ErrorInfo}');</script>";
+                echo "<script>window.open('./nurses.php','_self')</script>";
+            }
+        }
     }
 }
+
 ?>
 

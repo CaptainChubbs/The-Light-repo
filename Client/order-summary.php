@@ -18,8 +18,8 @@
         if (isset($_POST['checkout'])) {
             // Get the selected services from the user's cart session.
             if (isset($_SESSION['user_cart']) && is_array($_SESSION['user_cart'])) {
-                include __DIR__.'/./includes/connect.php'; // Include your database connection file.
-    
+                require_once("../../config/connect.php"); // Include your database connection file.
+                
                 // Initialize the total price for the order.
                 $totalPrice = 0;
     

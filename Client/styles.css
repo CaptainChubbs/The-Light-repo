@@ -1,164 +1,179 @@
-:root{
+/** @format */
+
+:root {
     font-size: 18px;
-    --bg-color: #FFFBE9 !important;
-    --color-green: #798A70 !important;
-    --dark-bg: #F4EAD5 !important;
-}
-body{
-    font-family: 'Tenor Sans', sans-serif !important;
+    --bg-color: #fffbe9 !important;
+    --color-green: #798a70 !important;
+    --dark-bg: #f4ead5 !important;
+  }
+  body {
+    font-family: "Tenor Sans", sans-serif !important;
     background-color: var(--bg-color) !important;
-
-}
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Bellefair', serif !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Bellefair", serif !important;
     color: var(--color-green) !important;
-
-}
-body nav div a{
+  }
+  body nav div a {
     background-color: none !important;
     color: var(--color-green) !important;
-}
-body .home-div nav div a{
+  }
+  body .home-div nav div a {
     background-color: none !important;
     color: var(--bg-color) !important;
-}
-nav div a:hover{
+  }
+  nav div a:hover {
     color: #000 !important;
-}
-
-.btn-green {
+  }
+  
+  .btn-green {
     background-color: var(--color-green) !important;
     color: var(--bg-color) !important;
     border: none !important;
     border-radius: 35px !important;
     padding: 10px !important;
     margin: 10px !important;
-
-}
-.btn-green:hover {
+  }
+  .btn-green:hover {
     background-color: var(--dark-bg) !important;
     color: var(--color-green) !important;
     border: none !important;
     border-radius: 35px;
     padding: 10px;
     margin: 10px;
-
-}
-/* Dropdown menu background color*/
-
-body .home-div .navbar-nav > li > .dropdown-menu {     
-    background-color: var(--color-green);  
-}
-
-/* Dropdown menu font color*/ 
-
-body .home-div .navbar-nav > li > .dropdown-menu a{
-       color: var(--bg-color);  
-    }
-body .home-div .navbar-nav > li > .dropdown-menu a:hover{
-        color: var(--color-green) !important;  
-        background-color: var(--dark-bg);
-     }
-
-body .home-div{
-    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('../assets/img/nurse-hand.jpeg') no-repeat;
+  }
+  /* Dropdown menu background color*/
+  
+  body .home-div .navbar-nav > li > .dropdown-menu {
+    background-color: var(--color-green);
+  }
+  
+  /* Dropdown menu font color*/
+  
+  body .home-div .navbar-nav > li > .dropdown-menu a {
+    color: var(--bg-color);
+  }
+  body .home-div .navbar-nav > li > .dropdown-menu a:hover {
+    color: var(--color-green) !important;
+    background-color: var(--dark-bg);
+  }
+  
+  body .home-div {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../assets/img/nurse-hand.jpeg") no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-
-
-}
-body .home-div h2, body .home-div p{
+  }
+  body .home-div h2,
+  body .home-div p {
     color: var(--bg-color) !important;
-
-}
-body .home-div hr{
+  }
+  body .home-div hr {
     border: none;
     height: 5px;
     /* Set the hr color */
-    color: var(--bg-color);  /* old IE */
-    background-color: var(--bg-color);  /* Modern Browsers */
-}
-
-body main .cards .card{
+    color: var(--bg-color); /* old IE */
+    background-color: var(--bg-color); /* Modern Browsers */
+  }
+  
+  body main .cards .card {
     background-color: var(--dark-bg) !important;
     color: var(--color-green) !important;
     border: none !important;
     border-radius: 35px;
     width: 70% !important;
-}
-body main .cards .card img{
+  }
+  body main .cards .card img {
     border-radius: 35px;
     width: 230px;
     height: 180px;
-}
-body main .cards .card p{
+  }
+  body main .cards .card p {
     color: black !important;
-}
-body #services-sect .card{
+  }
+  body #services-sect .card {
     background-color: var(--dark-bg) !important;
     color: var(--color-green) !important;
     border: none !important;
     border-radius: 35px;
-}
-body #services-sect .card img{
+  }
+  body #services-sect .card img {
     border-radius: 35px;
     width: 230px;
     height: 230px;
-}
-body main #contact-sect a{
+  }
+  body main #contact-sect a {
     text-decoration: none !important;
     color: var(--color-green) !important;
-
-}
-body main #contact-sect a i{
+  }
+  body main #contact-sect a i {
     text-decoration: none !important;
     background-color: var(--color-green) !important;
     color: var(--bg-color) !important;
     border-radius: 35px;
     padding: 10px;
     margin: 10px;
-}
-body main #contact-sect a i:hover{
+  }
+  body main #contact-sect a i:hover {
     background-color: var(--dark-bg) !important;
     color: var(--color-green) !important;
-}
-
-.pricing-table {
+  }
+  
+  .pricing-table {
     background-color: #f5f5f5;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-}
-.table-heading {
+  }
+  .table-heading {
     color: #3e474d;
-}
-.table-subheading {
+  }
+  .table-subheading {
     color: #6c757d;
-}
-.table th, .table td {
+  }
+  .table th,
+  .table td {
     border: none;
-}
-.table th {
+  }
+  .table th {
     background-color: #f5f5f5;
-}
-
-footer .footer-div{
+  }
+  
+  footer .footer-div {
     background-color: var(--color-green) !important;
     color: var(--bg-color) !important;
-}
-footer .footer-div a{
+  }
+  footer .footer-div a {
     color: var(--bg-color) !important;
-}
-footer .footer-div ul{
+  }
+  footer .footer-div ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-footer .footer-div a:hover{
+  }
+  footer .footer-div a:hover {
     color: var(--bg-color) !important;
-}
-footer .footer-div h4{
+  }
+  footer .footer-div h4 {
     background-color: var(--color-green) !important;
     color: var(--bg-color) !important;
-}
+  }
+  
+  /* Form */
+  .individual-form,
+  .business-form {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .show-form {
+    display: block !important;
+    visibility: visible !important;
+  }
+  

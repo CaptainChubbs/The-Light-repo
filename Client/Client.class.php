@@ -1,4 +1,5 @@
 <?php
+
 class Client
 {
     public function checkUser($data = array())

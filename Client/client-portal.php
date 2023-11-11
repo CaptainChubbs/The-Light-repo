@@ -24,6 +24,30 @@
             </nav>
         </div>
     </header> -->
+
+    <?php
+    // Include necessary files and establish database connection
+    // include_once("includes/head.php");
+    // include_once("includes/nav.php");
+
+    $clientID = 1; // Replace with the actual user identifier
+
+    // Query the database to retrieve user information
+    $sql = "SELECT first_name, last_name, email, dob, phone_number, address FROM client WHERE clientID = ?";
+    if ($stmt = $con->prepare($sql)) {
+        $stmt->bind_param('i', $clientID);
+        $stmt->execute();
+        $stmt->store_result();
+
+        if ($stmt->num_rows > 0) {
+            $stmt->bind_result($firstName, $lastName, $email, $dob, $phoneNumber, $address);
+            $stmt->fetch();
+        } else {
+            echo "User not found in the database.";
+            exit;
+        }
+    }
+    ?>
     
     <section class="py-5">
         <div class="container">
@@ -36,29 +60,30 @@
                         <h2>User Information</h2>
                         <form id="user-info-form" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                             <div class="form-group">
-                                <label for="username">Name:</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter Name" value="<?php echo $firstName; ?>" readonly>
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name" value="<?php echo $firstName; ?>" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="username">Surname:</label>
-                                <input type="text" class="form-control" id="surname" placeholder="Enter Surname" value="<?php echo $lastName; ?>" readonly>
+                                <label for="surname">Surname:</label>
+                                <input type="text" class="form-control" id="surname" value="<?php echo $lastName; ?>" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="username">Age:</label>
-                                <input type="text" class="form-control" id="age" placeholder="Enter Age" value="<?php echo  $age; ?>" readonly>
+                                <label for="dob">Date of Birth:</label>
+                                <input type="text" class="form-control" id="dob" value="<?php echo $dob; ?>" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter Email" value="<?php echo $email; ?>" readonly>
+                                <input type="email" class="form-control" id="email" value="<?php echo $email; ?>" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="username">Phone number:</label>
-                                <input type="text" class="form-control" id="number" placeholder="Enter Phone Number" value="<?php echo $phoneNumber; ?>" readonly>
+                                <label for="phone_number">Phone number:</label>
+                                <input type="text" class="form-control" id="phone_number" value="<?php echo $phoneNumber; ?>" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="username">Address:</label>
-                                <input type="text" class="form-control" id="address" placeholder="Enter Address" value="<?php echo $address; ?>" readonly>
+                                <label for="address">Address:</label>
+                                <input type="text" class="form-control" id="address" value="<?php echo $address; ?>" readonly>
                             </div>
+                            <!-- Add more user information fields as needed -->
                             <button type="button" class="btn btn-primary" id="edit-user-info">Edit</button>
                             <button type="submit" class="btn btn-success" id="save-user-info" disabled>Save</button>
                         </form>
@@ -186,3 +211,6 @@ $conn->close();
 
 </body>
 </html>
+
+
+
