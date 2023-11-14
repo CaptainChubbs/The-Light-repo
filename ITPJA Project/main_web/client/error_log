@@ -1,0 +1,514 @@
+[07-Nov-2023 07:18:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'wp15.host-ww.net' (using password: YES) in /home/abahleng/public_html/connect.php:8
+Stack trace:
+#0 /home/abahleng/public_html/connect.php(8): mysqli_connect('102.130.125.52', 'root', 'r3zsaturn', 'Abahlengi')
+#1 /home/abahleng/public_html/client/register-client.php(8): include('/home/abahleng/...')
+#2 {main}
+  thrown in /home/abahleng/public_html/connect.php on line 8
+[07-Nov-2023 07:20:11 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'wp15.host-ww.net' (using password: YES) in /home/abahleng/public_html/connect.php:8
+Stack trace:
+#0 /home/abahleng/public_html/connect.php(8): mysqli_connect('102.130.125.52', 'root', 'r3zsaturn', 'Abahlengi')
+#1 /home/abahleng/public_html/client/register-client.php(8): include('/home/abahleng/...')
+#2 {main}
+  thrown in /home/abahleng/public_html/connect.php on line 8
+[07-Nov-2023 07:30:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'wp15.host-ww.net' (using password: YES) in /home/abahleng/public_html/connect.php:8
+Stack trace:
+#0 /home/abahleng/public_html/connect.php(8): mysqli_connect('102.130.125.52', 'root', 'r3zsaturn', 'Abahlengi')
+#1 /home/abahleng/public_html/client/register-client.php(8): include('/home/abahleng/...')
+#2 {main}
+  thrown in /home/abahleng/public_html/connect.php on line 8
+[07-Nov-2023 07:30:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'wp15.host-ww.net' (using password: YES) in /home/abahleng/public_html/connect.php:8
+Stack trace:
+#0 /home/abahleng/public_html/connect.php(8): mysqli_connect('102.130.125.52', 'root', 'r3zsaturn', 'Abahlengi')
+#1 /home/abahleng/public_html/client/register-client.php(8): include('/home/abahleng/...')
+#2 {main}
+  thrown in /home/abahleng/public_html/connect.php on line 8
+[07-Nov-2023 07:30:37 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'wp15.host-ww.net' (using password: YES) in /home/abahleng/public_html/connect.php:8
+Stack trace:
+#0 /home/abahleng/public_html/connect.php(8): mysqli_connect('102.130.125.52', 'root', 'r3zsaturn', 'Abahlengi')
+#1 /home/abahleng/public_html/client/register-client.php(8): include('/home/abahleng/...')
+#2 {main}
+  thrown in /home/abahleng/public_html/connect.php on line 8
+[07-Nov-2023 07:30:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'wp15.host-ww.net' (using password: YES) in /home/abahleng/public_html/connect.php:8
+Stack trace:
+#0 /home/abahleng/public_html/connect.php(8): mysqli_connect('102.130.125.52', 'root', 'r3zsaturn', 'Abahlengi')
+#1 /home/abahleng/public_html/client/register-client.php(8): include('/home/abahleng/...')
+#2 {main}
+  thrown in /home/abahleng/public_html/connect.php on line 8
+[07-Nov-2023 07:31:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'wp15.host-ww.net' (using password: YES) in /home/abahleng/public_html/connect.php:8
+Stack trace:
+#0 /home/abahleng/public_html/connect.php(8): mysqli_connect('102.130.125.52', 'root', 'r3zsaturn', 'Abahlengi')
+#1 /home/abahleng/public_html/client/register-client.php(8): include('/home/abahleng/...')
+#2 {main}
+  thrown in /home/abahleng/public_html/connect.php on line 8
+[07-Nov-2023 07:31:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'wp15.host-ww.net' (using password: YES) in /home/abahleng/public_html/connect.php:8
+Stack trace:
+#0 /home/abahleng/public_html/connect.php(8): mysqli_connect('102.130.125.52', 'root', 'r3zsaturn', 'Abahlengi')
+#1 /home/abahleng/public_html/client/register-client.php(8): include('/home/abahleng/...')
+#2 {main}
+  thrown in /home/abahleng/public_html/connect.php on line 8
+[07-Nov-2023 07:36:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'wp15.host-ww.net' (using password: YES) in /home/abahleng/public_html/connect.php:8
+Stack trace:
+#0 /home/abahleng/public_html/connect.php(8): mysqli_connect('102.130.125.52', 'root', 'r3zsaturn', 'Abahlengi')
+#1 /home/abahleng/public_html/client/register-client.php(8): include('/home/abahleng/...')
+#2 {main}
+  thrown in /home/abahleng/public_html/connect.php on line 8
+[07-Nov-2023 07:38:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'clientType' in 'field list' in /home/abahleng/public_html/client/register-client.php:54
+Stack trace:
+#0 /home/abahleng/public_html/client/register-client.php(54): mysqli->prepare('INSERT INTO cli...')
+#1 {main}
+  thrown in /home/abahleng/public_html/client/register-client.php on line 54
+[07-Nov-2023 07:40:59 UTC] PHP Warning:  require(vendor/phpmailer/phpmailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/abahleng/public_html/client/phpMailerConfig.php on line 6
+[07-Nov-2023 07:40:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/phpmailer/phpmailer/src/PHPMailer.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/abahleng/public_html/client/phpMailerConfig.php:6
+Stack trace:
+#0 /home/abahleng/public_html/client/register-client.php(69): require()
+#1 {main}
+  thrown in /home/abahleng/public_html/client/phpMailerConfig.php on line 6
+[07-Nov-2023 07:45:38 UTC] PHP Warning:  require(vendor/phpmailer/phpmailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/abahleng/public_html/client/phpMailerConfig.php on line 6
+[07-Nov-2023 07:45:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/phpmailer/phpmailer/src/PHPMailer.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/abahleng/public_html/client/phpMailerConfig.php:6
+Stack trace:
+#0 /home/abahleng/public_html/client/register-client.php(69): require()
+#1 {main}
+  thrown in /home/abahleng/public_html/client/phpMailerConfig.php on line 6
+[07-Nov-2023 07:53:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/abahleng/public_html/client/register-client.php:64) in /home/abahleng/public_html/client/phpMailerConfig.php on line 61
+[07-Nov-2023 08:06:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/abahleng/public_html/client/register-client.php:64) in /home/abahleng/public_html/client/phpMailerConfig.php on line 61
+[07-Nov-2023 08:12:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/abahleng/public_html/client/register-client.php:64) in /home/abahleng/public_html/client/phpMailerConfig.php on line 61
+[07-Nov-2023 08:13:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/abahleng/public_html/client/register-client.php:64) in /home/abahleng/public_html/client/phpMailerConfig.php on line 61
+[07-Nov-2023 08:13:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/abahleng/public_html/client/register-client.php:64) in /home/abahleng/public_html/client/phpMailerConfig.php on line 61
+[07-Nov-2023 08:19:54 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 08:22:42 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 08:22:46 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 08:22:49 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 08:22:52 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 08:22:55 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 08:23:12 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 10:58:43 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 10:59:28 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 11:00:10 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 11:04:40 UTC] PHP Warning:  Undefined variable $gClient in /home/abahleng/public_html/client/logout.php on line 10
+[07-Nov-2023 11:04:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function revokeToken() on null in /home/abahleng/public_html/client/logout.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/abahleng/public_html/client/logout.php on line 10
+[07-Nov-2023 11:04:43 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 11:04:46 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 11:04:52 UTC] PHP Warning:  Undefined variable $gClient in /home/abahleng/public_html/client/logout.php on line 10
+[07-Nov-2023 11:04:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function revokeToken() on null in /home/abahleng/public_html/client/logout.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/abahleng/public_html/client/logout.php on line 10
+[07-Nov-2023 11:04:53 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 11:07:09 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 11:07:12 UTC] PHP Warning:  Undefined variable $gClient in /home/abahleng/public_html/client/logout.php on line 10
+[07-Nov-2023 11:07:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function revokeToken() on null in /home/abahleng/public_html/client/logout.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/abahleng/public_html/client/logout.php on line 10
+[07-Nov-2023 11:07:16 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 11:07:42 UTC] PHP Warning:  include(../../connect.php): Failed to open stream: No such file or directory in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 11:07:42 UTC] PHP Warning:  include(): Failed opening '../../connect.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 11:07:46 UTC] PHP Warning:  include(../../connect.php): Failed to open stream: No such file or directory in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 11:07:46 UTC] PHP Warning:  include(): Failed opening '../../connect.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 11:08:08 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 11:08:19 UTC] PHP Warning:  Undefined variable $gClient in /home/abahleng/public_html/client/logout.php on line 10
+[07-Nov-2023 11:08:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function revokeToken() on null in /home/abahleng/public_html/client/logout.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/abahleng/public_html/client/logout.php on line 10
+[07-Nov-2023 11:08:31 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/abahleng/public_html/client/logout.php on line 24
+[07-Nov-2023 11:09:15 UTC] PHP Warning:  include(../../connect.php): Failed to open stream: No such file or directory in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 11:09:15 UTC] PHP Warning:  include(): Failed opening '../../connect.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 11:09:58 UTC] PHP Warning:  include(../../connect.php): Failed to open stream: No such file or directory in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 11:09:58 UTC] PHP Warning:  include(): Failed opening '../../connect.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 11:10:04 UTC] PHP Warning:  include(../../connect.php): Failed to open stream: No such file or directory in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 11:10:04 UTC] PHP Warning:  include(): Failed opening '../../connect.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/abahleng/public_html/client/password_recovery.php on line 14
+[07-Nov-2023 16:45:24 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 16:45:24 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 16:45:54 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 16:45:55 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 23:46:50 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 23:48:34 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 23:48:43 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 23:48:43 UTC] PHP Warning:  Undefined array key "name" in /home/abahleng/public_html/client/index.php on line 59
+[07-Nov-2023 23:48:43 UTC] PHP Warning:  Undefined array key "surname" in /home/abahleng/public_html/client/index.php on line 63
+[07-Nov-2023 23:48:43 UTC] PHP Warning:  Undefined array key "age" in /home/abahleng/public_html/client/index.php on line 67
+[07-Nov-2023 23:49:46 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 23:54:14 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 23:54:48 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 23:54:51 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[07-Nov-2023 23:56:47 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/abahleng/public_html/client/logout.php on line 24
+[08-Nov-2023 15:44:33 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 15:44:51 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 15:44:53 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 15:45:27 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 15:46:26 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:01:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/abahleng/public_html/client/auth.php:31) in /home/abahleng/public_html/client/auth.php on line 32
+[08-Nov-2023 17:01:18 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:02:01 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:02:09 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:07:45 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:16:50 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:25:52 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:26:54 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:26:54 UTC] PHP Warning:  Undefined array key "firstname" in /home/abahleng/public_html/client/index.php on line 56
+[08-Nov-2023 17:26:54 UTC] PHP Warning:  Undefined array key "lastname
+                        " in /home/abahleng/public_html/client/index.php on line 56
+[08-Nov-2023 17:26:54 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 62
+[08-Nov-2023 17:27:33 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:27:33 UTC] PHP Warning:  Undefined array key "firstname" in /home/abahleng/public_html/client/index.php on line 56
+[08-Nov-2023 17:27:33 UTC] PHP Warning:  Undefined array key "lastname
+                        " in /home/abahleng/public_html/client/index.php on line 56
+[08-Nov-2023 17:27:33 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 62
+[08-Nov-2023 17:27:35 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:27:35 UTC] PHP Warning:  Undefined array key "firstname" in /home/abahleng/public_html/client/index.php on line 56
+[08-Nov-2023 17:27:35 UTC] PHP Warning:  Undefined array key "lastname
+                        " in /home/abahleng/public_html/client/index.php on line 56
+[08-Nov-2023 17:27:35 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 62
+[08-Nov-2023 17:27:40 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:27:40 UTC] PHP Warning:  Undefined array key "last_name
+                        " in /home/abahleng/public_html/client/index.php on line 56
+[08-Nov-2023 17:27:40 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 62
+[08-Nov-2023 17:28:56 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:28:56 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 17:30:38 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:30:38 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 17:43:03 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:43:03 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 17:47:13 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:47:13 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 17:47:13 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 80
+[08-Nov-2023 17:47:13 UTC] PHP Warning:  Undefined array key "status" in /home/abahleng/public_html/client/index.php on line 81
+[08-Nov-2023 17:47:13 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 82
+[08-Nov-2023 17:49:54 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:49:54 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 17:49:54 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 80
+[08-Nov-2023 17:49:54 UTC] PHP Warning:  Undefined array key "status" in /home/abahleng/public_html/client/index.php on line 81
+[08-Nov-2023 17:49:54 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 82
+[08-Nov-2023 17:50:30 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 17:50:30 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 17:50:30 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 81
+[08-Nov-2023 17:50:30 UTC] PHP Warning:  Undefined array key "status" in /home/abahleng/public_html/client/index.php on line 82
+[08-Nov-2023 17:50:30 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 83
+[08-Nov-2023 18:04:54 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 18:04:54 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 18:04:54 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 81
+[08-Nov-2023 18:04:54 UTC] PHP Warning:  Undefined array key "status" in /home/abahleng/public_html/client/index.php on line 82
+[08-Nov-2023 18:04:54 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 83
+[08-Nov-2023 18:04:59 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 18:04:59 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 18:04:59 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[08-Nov-2023 18:04:59 UTC] PHP Warning:  Undefined array key "status" in /home/abahleng/public_html/client/index.php on line 75
+[08-Nov-2023 18:04:59 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 76
+[08-Nov-2023 18:17:14 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 18:17:14 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 18:17:14 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[08-Nov-2023 18:17:14 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[08-Nov-2023 18:18:31 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 18:18:31 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 18:18:31 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[08-Nov-2023 18:18:31 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[08-Nov-2023 18:18:37 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[08-Nov-2023 18:18:37 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[08-Nov-2023 18:18:37 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[08-Nov-2023 18:18:37 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:10:14 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:10:14 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:10:14 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:10:14 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:18:25 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:18:25 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:18:25 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:18:25 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:28:16 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:28:16 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:28:16 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:28:16 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:28:19 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/abahleng/public_html/client/logout.php on line 24
+[09-Nov-2023 05:29:43 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/abahleng/public_html/client/logout.php on line 24
+[09-Nov-2023 05:34:34 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "logged_in" in /home/abahleng/public_html/client/logout.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/abahleng/public_html/client/logout.php on line 22
+[09-Nov-2023 05:34:37 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "logged_in" in /home/abahleng/public_html/client/logout.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/abahleng/public_html/client/logout.php on line 22
+[09-Nov-2023 05:35:17 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:35:17 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:35:17 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:35:17 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:35:27 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:35:27 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:35:27 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:35:27 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:35:32 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "logged_in" in /home/abahleng/public_html/client/logout.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/abahleng/public_html/client/logout.php on line 22
+[09-Nov-2023 05:36:40 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:36:40 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:36:40 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:36:40 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:38:18 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:38:18 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:38:18 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:38:18 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:42:16 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:42:16 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:42:16 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:42:16 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:42:36 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:42:36 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:42:36 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:42:36 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:43:04 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:43:04 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:43:04 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:43:04 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:45:17 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:45:17 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:45:17 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:45:17 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:46:24 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:46:24 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:46:24 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:46:24 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:46:29 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:46:29 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:46:29 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:46:29 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:46:30 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:46:30 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:46:30 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:46:30 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:48:17 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:48:17 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:48:17 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:48:17 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:48:39 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:48:39 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:48:39 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:48:39 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 05:52:10 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 05:52:10 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 05:52:10 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 05:52:10 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 07:19:25 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 07:19:25 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 07:19:25 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 07:19:25 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 07:22:15 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 07:22:15 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 07:22:15 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 07:22:15 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 07:24:58 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 07:24:59 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 07:24:59 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 07:24:59 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 07:26:20 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 07:26:20 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 07:26:20 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 07:26:20 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 07:32:20 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 07:32:20 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 07:32:20 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 07:32:20 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 07:38:38 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 07:38:38 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 07:38:38 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 07:38:38 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:20:42 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:20:42 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:20:42 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:20:42 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:15 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:15 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:15 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:15 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:17 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:17 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:17 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:17 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:18 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:18 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:18 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:18 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:19 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:19 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:19 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:19 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:19 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:19 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:19 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:19 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:20 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:20 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:20 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:20 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:20 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:20 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:20 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:20 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:21 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:21 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:21 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:21 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:21 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:21 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:21 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:21 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:21 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:22 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:33 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:33 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:33 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:33 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:41 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:41 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:41 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:41 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:21:46 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:21:46 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 61
+[09-Nov-2023 08:21:46 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 74
+[09-Nov-2023 08:21:46 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 75
+[09-Nov-2023 08:23:37 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:23:37 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 08:23:37 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 08:23:37 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 08:23:54 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:23:54 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 08:23:54 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 08:23:54 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 08:24:26 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:24:26 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 08:24:26 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 08:24:26 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 08:24:29 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:24:29 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 08:24:29 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 08:24:29 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 08:24:33 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:24:33 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 08:24:33 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 08:24:33 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 08:24:34 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:24:34 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 08:24:34 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 08:24:34 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 08:25:42 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:25:42 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 08:25:42 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 08:25:42 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 08:25:48 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 08:25:48 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 08:25:48 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 08:25:48 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:15:17 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:15:17 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:15:17 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:15:17 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:16:58 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:16:58 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:16:58 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:16:58 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:17:24 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:17:24 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:17:24 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:17:24 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:17:37 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:17:37 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:17:37 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:17:37 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:21:44 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:21:44 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:21:44 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:21:44 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:22:47 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:22:47 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:22:47 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:22:47 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:22:59 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:22:59 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:22:59 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:22:59 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:23:41 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:23:41 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:23:41 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:23:41 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:25:46 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:25:46 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:25:46 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:25:46 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:29:26 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:29:26 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:29:26 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:29:26 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:32:33 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:32:33 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:32:33 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:32:33 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:35:53 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:35:53 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:35:53 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:35:53 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:41:34 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:41:34 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:41:34 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:41:34 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[09-Nov-2023 09:52:10 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[09-Nov-2023 09:52:10 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[09-Nov-2023 09:52:10 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[09-Nov-2023 09:52:10 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[10-Nov-2023 11:54:51 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[10-Nov-2023 11:54:51 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[10-Nov-2023 11:54:51 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[10-Nov-2023 11:54:51 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[10-Nov-2023 11:56:23 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[10-Nov-2023 11:56:23 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[10-Nov-2023 11:56:23 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[10-Nov-2023 11:56:23 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[10-Nov-2023 11:56:36 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[10-Nov-2023 11:56:36 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[10-Nov-2023 11:56:36 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[10-Nov-2023 11:56:36 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[10-Nov-2023 11:56:44 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[10-Nov-2023 11:56:44 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[10-Nov-2023 11:56:44 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[10-Nov-2023 11:56:44 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[10-Nov-2023 11:58:52 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[10-Nov-2023 11:58:52 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[10-Nov-2023 11:58:52 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[10-Nov-2023 11:58:52 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[10-Nov-2023 11:59:02 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[10-Nov-2023 11:59:02 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[10-Nov-2023 11:59:02 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[10-Nov-2023 11:59:02 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[10-Nov-2023 11:59:21 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[10-Nov-2023 11:59:21 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[10-Nov-2023 11:59:21 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[10-Nov-2023 11:59:21 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[11-Nov-2023 11:20:57 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[11-Nov-2023 11:20:57 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[11-Nov-2023 11:20:57 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[11-Nov-2023 11:20:57 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[11-Nov-2023 11:21:05 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[11-Nov-2023 11:21:05 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[11-Nov-2023 11:21:05 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[11-Nov-2023 11:21:05 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[11-Nov-2023 11:21:23 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[11-Nov-2023 11:21:23 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[11-Nov-2023 11:21:23 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[11-Nov-2023 11:21:23 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56
+[11-Nov-2023 11:21:37 UTC] PHP Warning:  Undefined variable $title in /home/abahleng/public_html/client/includes/head.php on line 6
+[11-Nov-2023 11:21:37 UTC] PHP Warning:  Undefined array key "state" in /home/abahleng/public_html/client/index.php on line 42
+[11-Nov-2023 11:21:37 UTC] PHP Warning:  Undefined array key "date" in /home/abahleng/public_html/client/index.php on line 55
+[11-Nov-2023 11:21:37 UTC] PHP Warning:  Undefined array key "total" in /home/abahleng/public_html/client/index.php on line 56

@@ -2,11 +2,11 @@
 
 
 
-$conn = mysqli_connect('localhost', 'root', '', 'abahleng_db');
+$con = mysqli_connect('localhost', 'root', '', 'abahleng_db');
 
 
 
-if (!($conn)){
+if (!($con)){
 
     die("Connection failed: " . mysqli_connect_error());
 
