@@ -1,0 +1,222 @@
+Array
+(
+    [createdDate] => 2023-11-12T16:44:39.152155Z
+    [id] => evt_eLB31YpY1vwCpb2hn9ph3v5E
+    [payload] => Array
+        (
+            [amount] => 900
+            [createdDate] => 2023-11-12T16:44:22.749744Z
+            [currency] => ZAR
+            [id] => p_1Kg7bdVvVeNKIepOcy9hQ0Ep
+            [metadata] => Array
+                (
+                    [checkoutId] => ch_X3LRQ3n4ny6pcD8c0oosdoxD
+                    [productType] => checkout
+                )
+
+            [mode] => test
+            [paymentMethodDetails] => Array
+                (
+                    [card] => Array
+                        (
+                            [expiryMonth] => 5
+                            [expiryYear] => 26
+                            [maskedCard] => ************1111
+                            [scheme] => visa
+                        )
+
+                    [type] => card
+                )
+
+            [status] => succeeded
+            [type] => payment
+        )
+
+    [type] => payment.succeeded
+)
+
+Array
+(
+    [createdDate] => 2023-11-12T16:40:20.843701Z
+    [id] => evt_2LNQBnJb8R2teQDS6NGfkJxP
+    [payload] => Array
+        (
+            [amount] => 900
+            [createdDate] => 2023-11-12T16:40:02.800631Z
+            [currency] => ZAR
+            [id] => p_ogkYKJlBld1tJ93FX7hj8RL9
+            [metadata] => Array
+                (
+                    [checkoutId] => ch_2LNQBnJbp50TYMpSAJPt3pxP
+                    [productType] => checkout
+                )
+
+            [mode] => test
+            [paymentMethodDetails] => Array
+                (
+                    [card] => Array
+                        (
+                            [expiryMonth] => 8
+                            [expiryYear] => 26
+                            [maskedCard] => ************1111
+                            [scheme] => visa
+                        )
+
+                    [type] => card
+                )
+
+            [status] => succeeded
+            [type] => payment
+        )
+
+    [type] => payment.succeeded
+)
+
+Array
+(
+    [createdDate] => 2023-11-12T16:12:28.271192Z
+    [id] => evt_d9g0yQVkeBPqCJVJUVUyyOxV
+    [payload] => Array
+        (
+            [amount] => 900
+            [createdDate] => 2023-11-12T16:12:10.730519Z
+            [currency] => ZAR
+            [id] => p_ZgnMKRnwb5riPrrSqYVtDQOE
+            [metadata] => Array
+                (
+                    [checkoutId] => ch_7x3YdXDQW6Jf6wdsejKCeJAE
+                    [productType] => checkout
+                )
+
+            [mode] => test
+            [paymentMethodDetails] => Array
+                (
+                    [card] => Array
+                        (
+                            [expiryMonth] => 5
+                            [expiryYear] => 26
+                            [maskedCard] => ************1111
+                            [scheme] => visa
+                        )
+
+                    [type] => card
+                )
+
+            [status] => succeeded
+            [type] => payment
+        )
+
+    [type] => payment.succeeded
+)
+
+Array
+(
+    [createdDate] => 2023-11-12T16:47:42.945694Z
+    [id] => evt_Kx6mdXQJ3w7CXJrcaj0T34rg
+    [payload] => Array
+        (
+            [amount] => 900
+            [createdDate] => 2023-11-12T16:47:20.291468Z
+            [currency] => ZAR
+            [id] => p_dg1ekz72wmphXK3sP4ku0mWg
+            [metadata] => Array
+                (
+                    [checkoutId] => ch_ax4bdp98Q59CN2inRBtn3yEj
+                    [productType] => checkout
+                )
+
+            [mode] => test
+            [paymentMethodDetails] => Array
+                (
+                    [card] => Array
+                        (
+                            [expiryMonth] => 5
+                            [expiryYear] => 26
+                            [maskedCard] => ************1111
+                            [scheme] => visa
+                        )
+
+                    [type] => card
+                )
+
+            [status] => succeeded
+            [type] => payment
+        )
+
+    [type] => payment.succeeded
+)
+
+Array
+(
+    [createdDate] => 2023-11-12T14:20:21.442976Z
+    [id] => evt_Kx6mdXeaRDKHXrWuQkku3Xlg
+    [payload] => Array
+        (
+            [amount] => 940500
+            [createdDate] => 2023-11-12T14:20:04.780464Z
+            [currency] => ZAR
+            [id] => p_BEd5jKnBaVPhWqrFdJpU8kqg
+            [metadata] => Array
+                (
+                    [checkoutId] => ch_PLmQKJnm2mduPojT9ZwIR8vL
+                    [productType] => checkout
+                )
+
+            [mode] => test
+            [paymentMethodDetails] => Array
+                (
+                    [card] => Array
+                        (
+                            [expiryMonth] => 5
+                            [expiryYear] => 26
+                            [maskedCard] => ************1111
+                            [scheme] => visa
+                        )
+
+                    [type] => card
+                )
+
+            [status] => succeeded
+            [type] => payment
+        )
+
+    [type] => payment.succeeded
+)
+
+Array
+(
+    [createdDate] => 2023-11-12T16:51:06.541974Z
+    [id] => evt_pLpJKO53bXdCRJ7cwmkudKWg
+    [payload] => Array
+        (
+            [amount] => 900
+            [createdDate] => 2023-11-12T16:50:50.673152Z
+            [currency] => ZAR
+            [id] => p_4EX8M9paZ6VUw7YFzkouBJeE
+            [metadata] => Array
+                (
+                    [checkoutId] => ch_1EAw4v7VBGvTJBOtDnKhPBxm
+                    [productType] => checkout
+                )
+
+            [mode] => test
+            [paymentMethodDetails] => Array
+                (
+                    [card] => Array
+                        (
+                            [expiryMonth] => 5
+                            [expiryYear] => 26
+                            [maskedCard] => ************1111
+                            [scheme] => visa
+                        )
+
+                    [type] => card
+                )
+
+            [status] => succeeded
+            [type] => payment
+        )
+
+    [type] => payment.succeeded
+)
+

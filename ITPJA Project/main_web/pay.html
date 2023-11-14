@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Integration</title>
+    <!-- Include your custom styles here -->
+    <style>
+        /* Add your custom styles as needed */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .payment-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+
+<div class="payment-container">
+    <!-- PayPal Buttons Container -->
+    <div id="paypal-button-container"></div>
+
+    <!-- Result Message -->
+    <p id="result-message"></p>
+</div>
+
+<!-- Include PayPal JS SDK and your custom scripts -->
+<script src="https://www.paypal.com/sdk/js?components=buttons&client-id=ASDP8xjl8O5NSfb-SzqmL-lJV9tgmbULtShZg5WMC02uXEChy5yq4Vuhs2bGV-pN_YB14Vl0Xt2SfNhe"></script>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    var rate = urlParams.get('rate');
+    var num = urlParams.get('num');
+    var days = urlParams.get('numDays');
+    var req_id = urlParams.get('service_request_id');
+    var total = rate * num * days;
+    // Extract total amount from URL parameter
+    const totalAmount = total;
+
+    // Render PayPal Buttons
+    paypal.Buttons({
+        createOrder: function (data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: totalAmount,
+                        currency_code: 'USD'
+                    }
+                }]
+            });
+        },
+        onApprove: function (data, actions) {
+            // Capture the funds when the user approves the payment
+            return actions.order.capture().then(function (details) {
+                // Redirect to success.php after successful payment
+                window.location.href = `success.php?paymentID=${details.id}&payerID=${details.payer.payer_id}&status=success&total=${totalAmount}&req_id=${req_id}`;
+            });
+        }
+    }).render('#paypal-button-container');
+</script>
+
+</body>
+</html>
