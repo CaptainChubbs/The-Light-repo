@@ -1,6 +1,7 @@
 <?php
 session_start();
-include_once "connect.php";
+require_once("includes/connect.php");
+include_once("./includes/head.php");
 
 // display errors
 ini_set('display_errors', 1);
@@ -91,26 +92,46 @@ $con->close();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Hello, world!</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
+     <!--Navigation Bar Begins-->
+    <?php include("./nav.php"); ?>
+
     <form method="post">
-    <div class="form-group">
-            <label for="event-name">Event Name:</label>
-            <input type="text" class="form-control" id="event-name" name="event_name" required>
-        </div>
-        <div class="form-group">
-            <label for="event-date">Date:</label>
-            <input type="date" class="form-control" id="event-date" name="event_date" required>
-        </div>
-        <div class="form-group">
-            <label for="start_time">Start Time:</label>
-            <input type="time" class="form-control" id="start-time" name="start_time" required>
-        </div>
-        <div class="form-group">
-            <label for="end_time">End Time:</label>
-            <input type="time" class="form-control" id="end-time" name="end_time" required>
-        </div>
         <!-- Populate form fields with client data -->
         <div class="form-group">
             <label for="first_name">First Name:</label>
@@ -158,6 +179,22 @@ $con->close();
             <label for="postal_code">Postal Code:</label>
             <input type="text" class="form-control" id="postal_code" name="postal_code" value="<?php echo isset($postal_code) ? $postal_code : ''; ?>" required>
         </div>
+        <div class="form-group">
+            <label for="event-name">Event Name:</label>
+            <input type="text" class="form-control" id="event-name" name="event_name" required>
+        </div>
+        <div class="form-group">
+            <label for="event-date">Date:</label>
+            <input type="date" class="form-control" id="event-date" name="event_date" required>
+        </div>
+        <div class="form-group">
+            <label for="start_time">Start Time:</label>
+            <input type="time" class="form-control" id="start-time" name="start_time" required>
+        </div>
+        <div class="form-group">
+            <label for="end_time">End Time:</label>
+            <input type="time" class="form-control" id="end-time" name="end_time" required>
+        </div>
         <!-- Remaining form fields... -->
 
         <!-- Rest of the form remains unchanged -->
@@ -166,6 +203,54 @@ $con->close();
     </form>
 
     <!-- Include JavaScript and Bootstrap scripts as in your original code -->
+
+    <script src="create-event.js">
+        document.addEventListener("DOMContentLoaded", function() {
+        let selectedProvince = document.getElementById("event-province");
+
+        selectedProvince.addEventListener("change", function() {
+            // Get the selected province
+            let selectedProvince = this.value;
+
+
+            // Rest of the existing code...
+
+            // When the user submits the form
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Collect form data
+                let formData = new FormData(this);
+
+                // Add additional data if needed
+                // formData.append("additionalField", additionalValue);
+
+                // Send a POST request to the Node.js server
+                fetch("http://localhost:3000/api/book-event", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(Object.fromEntries(formData)),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response from the server
+                    console.log(data);
+                    // Redirect to the payment page or show a confirmation message
+                    // You may want to add logic here based on the server response
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    // Handle errors, show an error message to the user, etc.
+                });
+            });
+        });
+    });
+    </script>
+    
+
+    <?php include_once("./includes/footer.php"); ?>
 </body>
 
 </html>

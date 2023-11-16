@@ -27,7 +27,7 @@ include("./head.php");
     <div class="container-fluid d-flex justify-content-center">
       <?php
       global $conn;
-      cartFunc();
+      // cartFunc();
 
       // Setting the query as a variable
       $select_query = "SELECT * FROM `services` ORDER BY service_name";
@@ -59,7 +59,7 @@ include("./head.php");
                   <p class='card-text'>$short_desc</p>
                   <div class='row sticky-bottom'>
                     <div class='col-6'>
-                        <a href='create-event.php?service_id=$service_id' class='btn btn-add'>Book Now</a>
+                        <a href='./client/create-event.php?service_id=$service_id' class='btn btn-add'>Book Now</a>
                     </div>
                     <div class='col-6'>
                         <a href='read.php?service_id=$service_id' class='btn btn-assign'>Read More</a>
