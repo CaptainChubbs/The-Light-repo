@@ -25,7 +25,6 @@ db.connect((err) => {
 app.post("/api/book-event", (req, res) => {
   const eventData = req.body; // Assuming the client sends the event data in the request body
 
-  // Check if there is an event on the specified day
   const checkEventQuery = `
     SELECT * 
     FROM event 
@@ -47,7 +46,6 @@ app.post("/api/book-event", (req, res) => {
         return res.status(409).json({ error: "Event already scheduled for the selected day" });
       }
 
-      // If there is no conflicting event, proceed to create the event
       const insertEventQuery = `
         INSERT INTO event (
           event_type,
