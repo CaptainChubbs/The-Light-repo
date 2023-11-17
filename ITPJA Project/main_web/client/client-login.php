@@ -24,7 +24,7 @@
 <body>
 
   <!--Navigation Bar Begins-->
-<?php include("./nav.php"); ?>
+<?php include("./includes/nav.php"); ?>
 
 
 
